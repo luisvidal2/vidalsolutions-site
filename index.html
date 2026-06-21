@@ -107,15 +107,49 @@
   
 <script>
 (function(){
-  function initScrollReveal(){
-    var items=document.querySelectorAll('.animate-fade-in');
-    if(!items.length)return;
-    items.forEach(function(el){if(!el.closest('#hero'))el.classList.add('scroll-reveal')});
-    if(!('IntersectionObserver'in window)){document.querySelectorAll('.scroll-reveal').forEach(function(el){el.classList.add('scroll-reveal-visible')});return}
-    var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('scroll-reveal-visible');io.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-    document.querySelectorAll('.scroll-reveal').forEach(function(el){io.observe(el)});
+  function revealNow(el){
+    el.classList.add('scroll-reveal-visible');
+    el.classList.add('card-motion-visible');
   }
-  window.addEventListener('load',function(){requestAnimationFrame(function(){requestAnimationFrame(initScrollReveal)})});
+  function initMotion(){
+    var fadeItems=document.querySelectorAll('.animate-fade-in');
+    fadeItems.forEach(function(el){if(!el.closest('#hero'))el.classList.add('scroll-reveal')});
+
+    var projectCards=document.querySelectorAll('#projects .card-hover, section[id="projects"] .card-hover');
+    projectCards.forEach(function(card){card.classList.add('project-card-motion','scroll-reveal')});
+
+    var targets=document.querySelectorAll('.scroll-reveal,.project-card-motion');
+    if(!targets.length)return false;
+
+    if(!('IntersectionObserver'in window)){targets.forEach(revealNow);return true}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){revealNow(entry.target);io.unobserve(entry.target)}
+      })
+    },{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+    targets.forEach(function(el){
+      if(el.dataset.motionObserved)return;
+      el.dataset.motionObserved='1';
+      io.observe(el);
+    });
+    return true;
+  }
+  function boot(){
+    var tries=0;
+    function attempt(){
+      tries++;
+      initMotion();
+      if(tries<12)setTimeout(attempt,250);
+    }
+    attempt();
+    if('MutationObserver'in window){
+      var mo=new MutationObserver(function(){initMotion()});
+      mo.observe(document.body,{childList:true,subtree:true});
+      setTimeout(function(){mo.disconnect()},8000);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+  window.addEventListener('load',boot);
 })();
 </script>
 </body>

@@ -2,3 +2,14 @@
 
 /* Mobile/scroll reveal fix: lower sections animate when they enter the viewport instead of finishing before the user scrolls to them. */
 .scroll-reveal{opacity:0!important;transform:translateY(24px)!important;animation:none!important;transition:opacity .65s ease,transform .65s ease}.scroll-reveal.scroll-reveal-visible{opacity:1!important;transform:translateY(0)!important}.scroll-reveal.delay-200{transition-delay:.2s}.scroll-reveal.delay-300{transition-delay:.3s}.scroll-reveal.delay-400{transition-delay:.4s}.scroll-reveal.delay-500{transition-delay:.5s}
+
+/* Project cards: visible mobile animations for text, bullets, icon, tags, and card glow. */
+.project-card-motion{position:relative;overflow:hidden;animation:card-soft-glow 4s ease-in-out infinite}
+.project-card-motion h3,.project-card-motion li,.project-card-motion .inline-block{opacity:0;transform:translateY(16px);transition:opacity .58s ease,transform .58s ease}
+.project-card-motion .text-primary.mb-4{animation:icon-float-soft 3s ease-in-out infinite}
+.project-card-motion .text-secondary.font-bold{animation:bullet-pulse 1.8s ease-in-out infinite}
+.project-card-motion.card-motion-visible h3,.project-card-motion.card-motion-visible li,.project-card-motion.card-motion-visible .inline-block{opacity:1;transform:translateY(0)}
+.project-card-motion.card-motion-visible h3{transition-delay:.08s}.project-card-motion.card-motion-visible li:nth-of-type(1){transition-delay:.18s}.project-card-motion.card-motion-visible li:nth-of-type(2){transition-delay:.32s}.project-card-motion.card-motion-visible .inline-block:nth-child(1){transition-delay:.48s}.project-card-motion.card-motion-visible .inline-block:nth-child(2){transition-delay:.58s}.project-card-motion.card-motion-visible .inline-block:nth-child(3){transition-delay:.68s}
+@keyframes card-soft-glow{0%,100%{box-shadow:var(--shadow-card)}50%{box-shadow:0 0 24px hsl(var(--primary)/.22),var(--shadow-card)}}
+@keyframes icon-float-soft{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes bullet-pulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
