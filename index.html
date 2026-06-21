@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v6.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v7.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -104,5 +104,19 @@
         }
       });
     </script>
-  </body>
+  
+<script>
+(function(){
+  function initScrollReveal(){
+    var items=document.querySelectorAll('.animate-fade-in');
+    if(!items.length)return;
+    items.forEach(function(el){if(!el.closest('#hero'))el.classList.add('scroll-reveal')});
+    if(!('IntersectionObserver'in window)){document.querySelectorAll('.scroll-reveal').forEach(function(el){el.classList.add('scroll-reveal-visible')});return}
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('scroll-reveal-visible');io.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.scroll-reveal').forEach(function(el){io.observe(el)});
+  }
+  window.addEventListener('load',function(){requestAnimationFrame(function(){requestAnimationFrame(initScrollReveal)})});
+})();
+</script>
+</body>
 </html>
