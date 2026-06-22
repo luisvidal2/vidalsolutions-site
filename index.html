@@ -99,7 +99,50 @@
     filter: drop-shadow(0 0 10px rgba(255,255,255,.22));
     opacity: .96;
   }
+  html.dark #skills img[alt="ChatGPT"] { content: url('/assets/chatgpt-logo-dark.png'); }
+  html.dark #skills img[alt="Claude AI"] { content: url('/assets/claude-logo-dark.png'); }
+  html.dark #skills img[alt="Firebase"] { content: url('/assets/firebase-logo-dark.png'); }
+  html.dark #skills img[alt="Make"] { content: url('/assets/make-logo-dark.png'); }
+  html.dark #skills img[alt="Meta Business Partner"] { content: url('/assets/meta-logo-dark.png'); }
+  html.dark #skills img[alt="N8N"] { content: url('/assets/n8n-logo-dark.png'); }
+  html.dark #skills img[alt="Supabase"] { content: url('/assets/supabase-logo-dark.png'); }
 </style>
+<script id="vidal-dark-logo-switcher">
+(function(){
+  const darkLogos = {
+    "ChatGPT": "/assets/chatgpt-logo-dark.png",
+    "Claude AI": "/assets/claude-logo-dark.png",
+    "Firebase": "/assets/firebase-logo-dark.png",
+    "Make": "/assets/make-logo-dark.png",
+    "Meta Business Partner": "/assets/meta-logo-dark.png",
+    "N8N": "/assets/n8n-logo-dark.png",
+    "Supabase": "/assets/supabase-logo-dark.png"
+  };
+  function syncDarkLogos(){
+    const isDark = document.documentElement.classList.contains('dark');
+    document.querySelectorAll('#skills img[alt]').forEach((img) => {
+      const darkSrc = darkLogos[img.getAttribute('alt')];
+      if (!darkSrc) return;
+      if (!img.dataset.lightSrc) img.dataset.lightSrc = img.getAttribute('src') || '';
+      const nextSrc = isDark ? darkSrc : img.dataset.lightSrc;
+      if (img.getAttribute('src') !== nextSrc) img.setAttribute('src', nextSrc);
+    });
+  }
+  let scheduled = false;
+  function scheduleSync(){
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => { scheduled = false; syncDarkLogos(); });
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    syncDarkLogos();
+    new MutationObserver(scheduleSync).observe(document.documentElement, {attributes:true, attributeFilter:['class']});
+    new MutationObserver(scheduleSync).observe(document.body, {childList:true, subtree:true});
+    setTimeout(syncDarkLogos, 500);
+    setTimeout(syncDarkLogos, 1500);
+  });
+})();
+</script>
     </head>
 
   <body>
