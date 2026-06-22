@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v21.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v22.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo-v2.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -85,10 +85,18 @@
       transform-origin: top center;
     }
   }
+  html.dark #skills h2,
+  html.dark #skills .text-foreground {
+    color: rgba(255,255,255,.96) !important;
+    -webkit-text-fill-color: rgba(255,255,255,.96) !important;
+  }
   html.dark #skills .vidal-tool-logo-card {
-    background: rgba(255,255,255,.16) !important;
-    border: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 12px 28px rgba(0,0,0,.16) !important;
+    background: rgba(255,255,255,.07) !important;
+    border: 1px solid rgba(255,255,255,.06);
+    box-shadow: 0 10px 24px rgba(0,0,0,.10) !important;
+  }
+  html.dark #skills .vidal-tool-logo-card img {
+    filter: drop-shadow(0 0 10px rgba(255,255,255,.22));
   }
 </style>
     </head>
