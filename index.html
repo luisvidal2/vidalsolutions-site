@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v19.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v20.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo-v2.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -225,12 +225,28 @@
     const mobileMenuBtn=document.querySelector('header button[class*="md:hidden"]');
     const headerRow=mobileMenuBtn&&mobileMenuBtn.parentElement;
     box.style.cssText='z-index:60;height:36px;min-width:64px;background:rgba(15,23,42,.48);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:0 10px;box-shadow:0 10px 30px rgba(0,0,0,.22);display:flex;align-items:center;justify-content:center;gap:6px;color:white;font:700 13px system-ui;line-height:1';
-    if(headerRow){
-      box.style.position='relative'; box.style.right='auto'; box.style.bottom='auto'; box.style.marginLeft='8px';
-      if(box.parentElement!==headerRow) headerRow.insertBefore(box,mobileMenuBtn);
+    if(headerRow&&mobileMenuBtn){
+      box.style.position='relative'; box.style.right='auto'; box.style.bottom='auto'; box.style.top='auto'; box.style.marginLeft='8px';
+      if(box.parentElement!==headerRow) mobileMenuBtn.insertAdjacentElement('afterend',box);
     }else{
       box.style.position='fixed'; box.style.right='14px'; box.style.top='22px'; box.style.bottom='auto';
       if(box.parentElement!==document.body) document.body.appendChild(box);
+    }
+    moveThemeToggle();
+  }
+  function moveThemeToggle(){
+    const mobileMenuBtn=document.querySelector('header button[class*="md:hidden"]');
+    const headerRow=mobileMenuBtn&&mobileMenuBtn.parentElement;
+    const source=Array.from(document.querySelectorAll('#hero > div')).find(el=>String(el.className).includes('top-5')&&String(el.className).includes('right-10'));
+    const wrap=document.getElementById('vidal-theme-toggle-box')||(source&&source.querySelector('.button-wrap'));
+    if(!headerRow||!wrap)return;
+    wrap.id='vidal-theme-toggle-box';
+    wrap.style.position='relative'; wrap.style.zIndex='60'; wrap.style.marginLeft='8px'; wrap.style.display='flex'; wrap.style.alignItems='center';
+    const lang=document.getElementById('vidal-lang-box');
+    if(lang&&lang.parentElement===headerRow){
+      if(wrap.parentElement!==headerRow||lang.nextElementSibling!==wrap) lang.insertAdjacentElement('afterend',wrap);
+    }else if(mobileMenuBtn){
+      if(wrap.parentElement!==headerRow) mobileMenuBtn.insertAdjacentElement('afterend',wrap);
     }
   }
   function boot(){addSelector(); walk(document.body);}
