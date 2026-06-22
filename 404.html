@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v18.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v19.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo-v2.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -216,10 +216,22 @@
     }finally{busy=false;}
   }
   function addSelector(){
-    if(document.getElementById('vidal-lang-select'))return;
-    const box=document.createElement('div'); box.id='vidal-lang-box'; box.style.cssText='position:fixed;right:14px;bottom:14px;z-index:9999;background:rgba(10,14,24,.86);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 9px;box-shadow:0 14px 40px rgba(0,0,0,.32);display:flex;align-items:center;gap:7px;color:white;font:600 13px system-ui';
-    box.innerHTML='<span aria-hidden="true">🌐</span><select id="vidal-lang-select" aria-label="Idioma" style="background:transparent;color:white;border:0;outline:0;font:600 13px system-ui"><option value="es">ES</option><option value="en">EN</option><option value="ja">日本語</option></select>';
-    document.body.appendChild(box); const sel=box.querySelector('select'); sel.value=lang; sel.addEventListener('change',()=>{lang=sel.value;localStorage.setItem('vidal-lang',lang);walk(document.body);});
+    let box=document.getElementById('vidal-lang-box');
+    if(!box){
+      box=document.createElement('div'); box.id='vidal-lang-box';
+      box.innerHTML='<span aria-hidden="true" style="font-size:16px;line-height:1">🌐</span><select id="vidal-lang-select" aria-label="Idioma" style="appearance:auto;background:transparent;color:white;border:0;outline:0;font:700 13px system-ui;max-width:76px"><option value="es">ES</option><option value="en">EN</option><option value="ja">日本語</option></select>';
+      const sel=box.querySelector('select'); sel.value=lang; sel.addEventListener('change',()=>{lang=sel.value;localStorage.setItem('vidal-lang',lang);walk(document.body);});
+    }
+    const mobileMenuBtn=document.querySelector('header button[class*="md:hidden"]');
+    const headerRow=mobileMenuBtn&&mobileMenuBtn.parentElement;
+    box.style.cssText='z-index:60;height:36px;min-width:64px;background:rgba(15,23,42,.48);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:0 10px;box-shadow:0 10px 30px rgba(0,0,0,.22);display:flex;align-items:center;justify-content:center;gap:6px;color:white;font:700 13px system-ui;line-height:1';
+    if(headerRow){
+      box.style.position='relative'; box.style.right='auto'; box.style.bottom='auto'; box.style.marginLeft='8px';
+      if(box.parentElement!==headerRow) headerRow.insertBefore(box,mobileMenuBtn);
+    }else{
+      box.style.position='fixed'; box.style.right='14px'; box.style.top='22px'; box.style.bottom='auto';
+      if(box.parentElement!==document.body) document.body.appendChild(box);
+    }
   }
   function boot(){addSelector(); walk(document.body);}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot); else boot();
