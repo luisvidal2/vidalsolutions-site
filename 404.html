@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v25.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v26.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo-v3.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -107,67 +107,110 @@
   html.dark #skills img[alt="N8N"] { content: url('/assets/n8n-logo-dark.png'); }
   html.dark #skills img[alt="Supabase"] { content: url('/assets/supabase-logo-dark.png'); }
 
-  .vidal-image-carousel {
+  .vidal-coverflow {
     position: relative;
     width: min(1120px, 100vw);
     margin: 0 auto;
-    padding: 18px 0 34px;
+    padding: 12px 0 34px;
     overflow: hidden;
+    perspective: 1300px;
     isolation: isolate;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
-  .vidal-image-carousel::before {
+  .vidal-coverflow::before {
     content: "";
     position: absolute;
-    inset: 14% 8% 10%;
+    inset: 18% 12% 8%;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(59,130,246,.24), transparent 68%);
-    filter: blur(16px);
+    background:
+      radial-gradient(circle at 50% 45%, rgba(59,130,246,.26), transparent 54%),
+      radial-gradient(circle at 50% 80%, rgba(14,165,233,.18), transparent 58%);
+    filter: blur(18px);
     z-index: -1;
   }
-  .vidal-carousel-track {
-    display: flex;
-    align-items: center;
-    gap: clamp(18px, 4vw, 34px);
-    width: max-content;
-    animation: vidal-carousel-scroll 34s linear infinite;
-    will-change: transform;
+  .vidal-coverflow-stage {
+    position: relative;
+    height: clamp(430px, 58vw, 620px);
+    transform-style: preserve-3d;
   }
-  .vidal-image-carousel:hover .vidal-carousel-track { animation-play-state: paused; }
-  .vidal-carousel-card {
-    flex: 0 0 clamp(260px, 48vw, 460px);
-    height: clamp(250px, 38vw, 420px);
+  .vidal-coverflow-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(270px, 48vw, 520px);
+    height: clamp(310px, 42vw, 500px);
     margin: 0;
     overflow: hidden;
-    border-radius: 28px;
+    border-radius: 30px;
     background: rgba(255,255,255,.08);
     border: 1px solid rgba(148,163,184,.26);
-    box-shadow: 0 26px 64px rgba(2,6,23,.34);
-    transform: translateZ(0);
+    box-shadow: 0 32px 76px rgba(2,6,23,.38);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation: vidal-coverflow-rotate 12s cubic-bezier(.72,0,.22,1) infinite;
+    animation-delay: calc(var(--i) * -2s);
+    will-change: transform, opacity, filter;
   }
-  .vidal-carousel-card:nth-child(odd) { translate: 0 18px; }
-  .vidal-carousel-card:nth-child(3n) { flex-basis: clamp(220px, 40vw, 390px); height: clamp(220px, 34vw, 360px); }
-  .vidal-carousel-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .vidal-carousel-logo { object-fit: contain; padding: clamp(18px, 4vw, 34px); background: rgba(255,255,255,.95); }
-  @keyframes vidal-carousel-scroll {
-    from { transform: translate3d(0,0,0); }
-    to { transform: translate3d(calc(-50% - clamp(9px, 2vw, 17px)),0,0); }
+  .vidal-coverflow-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vidal-coverflow-logo { object-fit: contain; padding: clamp(20px, 4vw, 38px); background: rgba(255,255,255,.96); }
+  @keyframes vidal-coverflow-rotate {
+    0%, 8.33% {
+      transform: translate3d(-50%,-50%,170px) rotateY(0deg) scale(1.04);
+      opacity: 1;
+      filter: saturate(1.08) brightness(1.03);
+      z-index: 6;
+    }
+    16.66%, 25% {
+      transform: translate3d(30%,-50%,-120px) rotateY(-34deg) scale(.78);
+      opacity: .72;
+      filter: saturate(.82) brightness(.82);
+      z-index: 4;
+    }
+    33.33%, 41.66% {
+      transform: translate3d(92%,-50%,-360px) rotateY(-48deg) scale(.56);
+      opacity: 0;
+      filter: saturate(.7) brightness(.68);
+      z-index: 1;
+    }
+    50%, 58.33% {
+      transform: translate3d(-190%,-50%,-360px) rotateY(48deg) scale(.56);
+      opacity: 0;
+      filter: saturate(.7) brightness(.68);
+      z-index: 1;
+    }
+    66.66%, 75% {
+      transform: translate3d(-130%,-50%,-120px) rotateY(34deg) scale(.78);
+      opacity: .72;
+      filter: saturate(.82) brightness(.82);
+      z-index: 3;
+    }
+    83.33%, 100% {
+      transform: translate3d(-50%,-50%,170px) rotateY(0deg) scale(1.04);
+      opacity: 1;
+      filter: saturate(1.08) brightness(1.03);
+      z-index: 6;
+    }
   }
   @media (max-width: 767px) {
-    .vidal-image-carousel { width: 100vw; padding: 8px 0 28px; }
-    .vidal-carousel-track { gap: 18px; animation-duration: 28s; }
-    .vidal-carousel-card {
-      flex-basis: 76vw;
-      height: 390px;
-      border-radius: 24px;
-      box-shadow: 0 22px 54px rgba(2,6,23,.36);
+    .vidal-coverflow { width: 100vw; padding: 0 0 26px; perspective: 950px; }
+    .vidal-coverflow-stage { height: 520px; }
+    .vidal-coverflow-card {
+      width: min(78vw, 340px);
+      height: 400px;
+      border-radius: 26px;
+      box-shadow: 0 26px 64px rgba(2,6,23,.40);
     }
-    .vidal-carousel-card:nth-child(3n) { flex-basis: 70vw; height: 340px; }
-    .vidal-carousel-logo { padding: 24px; }
+    @keyframes vidal-coverflow-rotate {
+      0%, 8.33% { transform: translate3d(-50%,-50%,130px) rotateY(0deg) scale(1.03); opacity: 1; filter: saturate(1.08) brightness(1.03); z-index: 6; }
+      16.66%, 25% { transform: translate3d(8%,-50%,-120px) rotateY(-38deg) scale(.74); opacity: .66; filter: saturate(.82) brightness(.82); z-index: 4; }
+      33.33%, 41.66% { transform: translate3d(84%,-50%,-320px) rotateY(-48deg) scale(.52); opacity: 0; filter: saturate(.7) brightness(.68); z-index: 1; }
+      50%, 58.33% { transform: translate3d(-184%,-50%,-320px) rotateY(48deg) scale(.52); opacity: 0; filter: saturate(.7) brightness(.68); z-index: 1; }
+      66.66%, 75% { transform: translate3d(-108%,-50%,-120px) rotateY(38deg) scale(.74); opacity: .66; filter: saturate(.82) brightness(.82); z-index: 3; }
+      83.33%, 100% { transform: translate3d(-50%,-50%,130px) rotateY(0deg) scale(1.03); opacity: 1; filter: saturate(1.08) brightness(1.03); z-index: 6; }
+    }
   }
   @media (prefers-reduced-motion: reduce) {
-    .vidal-carousel-track { animation: none; transform: none; overflow-x: auto; }
+    .vidal-coverflow-stage { display: flex; gap: 18px; height: auto; overflow-x: auto; padding: 10px 20px 30px; }
+    .vidal-coverflow-card { position: relative; left: auto; top: auto; flex: 0 0 78vw; animation: none; transform: none; opacity: 1; }
   }
 </style>
 <script id="vidal-dark-logo-switcher">
