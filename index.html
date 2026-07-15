@@ -23,7 +23,7 @@
     <!-- Three.js and Vanta.js for animated background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-    <script type="module" crossorigin src="/assets/index-moneylink-export-v24.js"></script>
+    <script type="module" crossorigin src="/assets/index-moneylink-export-v25.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B5ZGhcPo-v3.css">
       <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://vidalsolutions.io/" />
@@ -107,61 +107,67 @@
   html.dark #skills img[alt="N8N"] { content: url('/assets/n8n-logo-dark.png'); }
   html.dark #skills img[alt="Supabase"] { content: url('/assets/supabase-logo-dark.png'); }
 
-  .vidal-image-flow {
+  .vidal-image-carousel {
     position: relative;
-    width: min(1050px, calc(100vw - 32px));
-    min-height: clamp(500px, 68vh, 720px);
+    width: min(1120px, 100vw);
     margin: 0 auto;
+    padding: 18px 0 34px;
+    overflow: hidden;
     isolation: isolate;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
-  .vidal-image-flow::before {
+  .vidal-image-carousel::before {
     content: "";
     position: absolute;
-    inset: 8% 2% 4%;
-    border-radius: 34px;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(59,130,246,.22), transparent 34%),
-      radial-gradient(circle at 80% 66%, rgba(14,165,233,.18), transparent 32%);
-    filter: blur(8px);
-    opacity: .72;
+    inset: 14% 8% 10%;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(59,130,246,.24), transparent 68%);
+    filter: blur(16px);
     z-index: -1;
   }
-  .vidal-image-tile {
-    position: absolute;
-    overflow: hidden;
-    margin: 0;
-    border-radius: 24px;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(148,163,184,.22);
-    box-shadow: 0 22px 56px rgba(2,6,23,.28);
-    animation: vidal-soft-float 7.5s ease-in-out infinite;
-    animation-delay: calc(var(--i) * -0.55s);
+  .vidal-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 4vw, 34px);
+    width: max-content;
+    animation: vidal-carousel-scroll 34s linear infinite;
     will-change: transform;
   }
-  .vidal-image-fit { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .vidal-image-logo { object-fit: contain; padding: 10px; background: rgba(255,255,255,.94); }
-  .vidal-image-tile-0 { top: 0; left: 50%; width: 20%; height: 18%; transform: translateX(-50%); z-index: 5; }
-  .vidal-image-tile-1 { top: 8%; right: 6%; width: 48%; height: 38%; z-index: 2; }
-  .vidal-image-tile-2 { top: 30%; left: 4%; width: 42%; height: 42%; z-index: 4; }
-  .vidal-image-tile-3 { top: 31%; right: 4%; width: 34%; height: 25%; z-index: 5; }
-  .vidal-image-tile-4 { bottom: 12%; right: 10%; width: 34%; height: 23%; z-index: 3; }
-  .vidal-image-tile-5 { bottom: 0; left: 15%; width: 50%; height: 28%; z-index: 1; }
-  @keyframes vidal-soft-float {
-    0%,100% { translate: 0 0; }
-    50% { translate: 0 -10px; }
+  .vidal-image-carousel:hover .vidal-carousel-track { animation-play-state: paused; }
+  .vidal-carousel-card {
+    flex: 0 0 clamp(260px, 48vw, 460px);
+    height: clamp(250px, 38vw, 420px);
+    margin: 0;
+    overflow: hidden;
+    border-radius: 28px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(148,163,184,.26);
+    box-shadow: 0 26px 64px rgba(2,6,23,.34);
+    transform: translateZ(0);
+  }
+  .vidal-carousel-card:nth-child(odd) { translate: 0 18px; }
+  .vidal-carousel-card:nth-child(3n) { flex-basis: clamp(220px, 40vw, 390px); height: clamp(220px, 34vw, 360px); }
+  .vidal-carousel-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vidal-carousel-logo { object-fit: contain; padding: clamp(18px, 4vw, 34px); background: rgba(255,255,255,.95); }
+  @keyframes vidal-carousel-scroll {
+    from { transform: translate3d(0,0,0); }
+    to { transform: translate3d(calc(-50% - clamp(9px, 2vw, 17px)),0,0); }
   }
   @media (max-width: 767px) {
-    .vidal-image-flow { width: min(100% - 28px, 430px); min-height: 560px; }
-    .vidal-image-tile { border-radius: 20px; box-shadow: 0 18px 44px rgba(2,6,23,.30); }
-    .vidal-image-tile-0 { top: 0; width: 34%; height: 15%; }
-    .vidal-image-tile-1 { top: 8%; right: 0; width: 58%; height: 27%; }
-    .vidal-image-tile-2 { top: 29%; left: 0; width: 58%; height: 34%; }
-    .vidal-image-tile-3 { top: 28%; right: 0; width: 45%; height: 22%; }
-    .vidal-image-tile-4 { top: 49%; right: 4%; width: 47%; height: 21%; }
-    .vidal-image-tile-5 { bottom: 0; left: 3%; width: 70%; height: 29%; }
+    .vidal-image-carousel { width: 100vw; padding: 8px 0 28px; }
+    .vidal-carousel-track { gap: 18px; animation-duration: 28s; }
+    .vidal-carousel-card {
+      flex-basis: 76vw;
+      height: 390px;
+      border-radius: 24px;
+      box-shadow: 0 22px 54px rgba(2,6,23,.36);
+    }
+    .vidal-carousel-card:nth-child(3n) { flex-basis: 70vw; height: 340px; }
+    .vidal-carousel-logo { padding: 24px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .vidal-image-tile { animation: none; }
+    .vidal-carousel-track { animation: none; transform: none; overflow-x: auto; }
   }
 </style>
 <script id="vidal-dark-logo-switcher">
