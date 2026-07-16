@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quinua Real | Moneylink Gourmet Exports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Shared Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-on-surface": "#f2f1ec",
+                "surface-container": "#f0eee9",
+                "on-surface": "#1b1c19",
+                "on-secondary-fixed-variant": "#61401b",
+                "on-error-container": "#93000a",
+                "primary-container": "#2d2926",
+                "secondary-fixed-dim": "#eebd8e",
+                "tertiary-fixed": "#ffdbcf",
+                "surface-container-high": "#eae8e3",
+                "tertiary-container": "#4b1b08",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#6f3722",
+                "inverse-primary": "#cdc5c0",
+                "secondary-container": "#fdcb9b",
+                "surface": "#fbf9f4",
+                "surface-dim": "#dbdad5",
+                "surface-container-highest": "#e4e2dd",
+                "on-secondary-container": "#79542d",
+                "on-tertiary-container": "#c77f65",
+                "primary": "#181512",
+                "secondary-fixed": "#ffdcbd",
+                "tertiary": "#2e0900",
+                "on-primary-container": "#96908b",
+                "surface-variant": "#e4e2dd",
+                "on-secondary-fixed": "#2c1600",
+                "surface-container-low": "#f5f3ee",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#1e1b18",
+                "on-primary-fixed-variant": "#4b4642",
+                "on-surface-variant": "#4d4540",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#fbf9f4",
+                "on-tertiary-fixed": "#380d00",
+                "inverse-surface": "#30312e",
+                "primary-fixed": "#e9e1dc",
+                "surface-tint": "#635d5a",
+                "tertiary-fixed-dim": "#ffb59b",
+                "background": "#fbf9f4",
+                "on-background": "#1b1c19",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "outline-variant": "#cfc4bd",
+                "secondary": "#7c5730",
+                "primary-fixed-dim": "#cdc5c0",
+                "outline": "#7e756f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "unit": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "label-caps": ["Hanken Grotesk"],
+                "headline-sm": ["Playfair Display"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-md": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"],
+                "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .text-label-caps { font-family: 'Hanken Grotesk'; font-size: 12px; line-height: 1; letter-spacing: 0.1em; font-weight: 600; text-transform: uppercase; }
+      .font-headline-md { font-family: 'Playfair Display'; font-size: 32px; font-weight: 600; }
+      
+      /* Subtle parallax effect for editorial feel */
+      .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+      .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky z-50 border-b border-outline-variant/30 dark:border-outline/20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<a class="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary dark:text-inverse-primary" href="#">Moneylink</a>
+<div class="hidden md:flex space-x-8">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Chocolate</a>
+<a class="text-label-caps font-label-caps text-primary dark:text-inverse-primary border-b-2 border-secondary pb-1" href="#">Quinua</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Cerveza</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Process</a>
+</div>
+<button class="text-label-caps font-label-caps bg-primary text-on-primary px-6 py-3 hover:scale-105 transition-transform duration-300">
+                Export Inquiry
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden bg-surface-container-low pt-20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 py-20">
+<div class="inline-block bg-tertiary/10 text-tertiary-container px-3 py-1 rounded-sm text-label-caps">BOLIVIAN ORIGIN</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">Quinua Real:<br/>The Ancestral Grain</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Grown at 3,700 meters above sea level, our Royal Quinoa is hand-harvested following centuries of Altiplano tradition.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 text-label-caps transition-all hover:opacity-80">Discover The Collection</button>
+<button class="border border-outline text-primary px-8 py-4 text-label-caps hover:bg-surface-container transition-colors">Learn History</button>
+</div>
+</div>
+<div class="relative grid grid-cols-3 h-[500px] md:h-[700px] gap-2 overflow-hidden border border-outline-variant/30">
+<div class="bg-cover bg-center h-full hover:scale-105 transition-transform duration-700" data-alt="Macro close-up shot of vibrant Red Royal Quinoa grains (Quinua Roja) in a textured ceramic bowl, warm afternoon sunlight casting long shadows across a neutral sand-colored background, high-end editorial photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZwrAOevo4mFYJj-xaXe0whPDOr9_xl1vjowkH4TbIqgR1vuIFEV67JOWtw3MpzrT007VC-D14AfrYB4QM2JVsDHaybgmOsZ9ocgafPvMpXgFsBKiiQdJ94mW4V9ShCukcvbvuff0Y78Cxu9OGteQvkqa0sYRCTHQgsk19QxUkNbncEm0Y7GL7xUDO1Mc2iF5JrWCxuXktBM-IYKXOA_e34H8MhtmH1FVGUxANSB7QnTCLfkN8uILrlFV8mmDB0BPMCds_zbgRSdc')"></div>
+<div class="bg-cover bg-center h-full hover:scale-105 transition-transform duration-700" data-alt="Macro high-resolution photo of Ivory Royal Quinoa grains (Quinua Blanca) in a minimalist dark stone bowl, soft neutral lighting highlighting the pearly texture of the seeds against a light beige background, sophisticated gourmet food styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBc5orvqPKrzV-whHeaMimpYTAy7sXmyj-bSUlbFrIVe2UI7qwMXpVQz90rEioqzHjVmuP6dIVpcCFDeyFhc1Wnu7oZwkNySHTmfPydM8yK5uu1PHbDB29gmx2daaL0MJCtlf8uQGfm3SUFsXfV8n_fjCM1qMDBQLQ_HypoMj3hvHlSsxoLdLz2QVciVRJnIaj41xKzQkN5YdvBoEuSSiod99P4_PDNRa5TuGIFawkgF9EwsaxWpngTPEzFfgJ8n4YYQz0Qp1ZpwnU')"></div>
+<div class="bg-cover bg-center h-full hover:scale-105 transition-transform duration-700" data-alt="Macro side-by-side view of Black Royal Quinoa (Quinua Negra) with deep charcoal tones, captured in a hand-crafted artisanal bowl. The lighting is focused and dramatic, emphasizing the unique texture of the high-altitude Andean grains." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5hMCIwDyCD3ZeGSqJ_5ahq2rV5rpT_gnqepDhFgSlt8ahgvcRvrh2T-X0Wma9VnZbCq4hVeMo9DLI8xZZCvYeMKJBkfnusduLS9TDGO7YC1w3jDi2XBv9YZawg4xFsLRYJfuZisjzc_PZ8sYXVccA1azGbBnDuzEzP58X9cNwtZJkfNJXtwlPw7qDPUMTj0YLE1lWIXXmwbPEjsCes6k4K6wslgN1pwkVH5rvu3FWMDR4TewwPIREP7DMh9dTgu_ADNUsWA72cUE')"></div>
+</div>
+</div>
+</header>
+<!-- Historia Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 reveal">
+<img class="w-full h-[500px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-1000 border border-outline-variant/20 shadow-sm" data-alt="A wide cinematic landscape of the Bolivian Altiplano during sunrise. Vast salt flats and high-altitude mountains meet a clear blue sky, with soft morning light illuminating the rugged, sacred terrain where quinoa has been grown for millennia. Muted, earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8PzBySgcdiT6S1PusVVshf_WP2c1d1zh5mTqGf42HC7Ic6dSTJ3pXN8hUN6D2wgj13vjDqVDGBhjvywBf5-5dEetjBU4KMyVamGz4NHJQV4gI5mKq_N00Uw-wbIJSoN21NGodJI1jLGQSOGzAMu6jkHyphrms5Sq3-cxDPlKSIMI5cZbHpDx3cnskNa6KAJ1vbZmnAXjMLw3ofNKuSlD-zOsNN9L6pqvJs2R4S1i6FlhlA4r881Nc8YCGtNTXwM32CJCfTtPTzuE"/>
+</div>
+<div class="md:col-span-5 space-y-6 reveal">
+<span class="text-label-caps text-secondary">OUR LEGACY</span>
+<h2 class="font-headline-md text-headline-md">Ancestral Heritage</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">For over 5,000 years, the indigenous communities of the Andes have cultivated Quinua Real. This isn't just a product; it's a sacred link to the past, nurtured by the unique mineral composition of the Uyuni salt flats and the intense solar radiation of the high-altitude plains.</p>
+<div class="pt-4">
+<div class="h-px w-24 bg-secondary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Origen Section with Map -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<div class="inline-flex items-center gap-2 mb-8 bg-surface px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="text-label-caps">Bolivian Altiplano: 3,700 MSNM</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-16">The Micro-Climate of Uyuni</h2>
+<div class="relative bg-surface p-12 border border-outline-variant overflow-hidden group">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="text-left space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Salar Effect</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The proximity to the world's largest salt flats creates a soil rich in potassium and lithium, naturally enhancing the nutritional density and size of the Royal grain compared to standard quinoa varieties.</p>
+</div>
+<div class="h-80 w-full grayscale border border-outline-variant/50">
+<img class="w-full h-full object-contain p-8" data-alt="A minimal, elegant line-art map showing the geography of the Bolivian Altiplano and the Uyuni Salt Flats. The style is editorial and sophisticated, using thin charcoal lines on a light stone-colored background with subtle gold accents for key locations." data-location="Uyuni, Bolivia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPt6E3K2R_53sasyYs-rD9Wi6hNB-ey26YAejzKvWBPhlPfN4VtBvPeG9DABUdg4kSUJC3XAc5_sNJLaRQ3nCNjTaOAqWOE6ZzrVHDnit92yDhenHL1HiCulP4rW70UE-ghS6qiQCtRSOmuyg-5UkcjURDH9bUqpU-vA9S_PVlHacu83xUT0ZjVeqf7oWiI9UcBUsif9z1draiDtSs5tbs5Vggs63RXfMS2K_TrAo8LwI9UmWzqcTO3Dg9C3Vn9w-RjOdm8QSuADU"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proceso Section -->
+<section class="py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="text-label-caps text-on-surface-variant">THE CRAFT</span>
+<h2 class="font-headline-md text-headline-md mt-4">A Ritual of Patience</h2>
+</div>
+<div class="text-label-caps text-outline hover:text-primary cursor-pointer transition-colors flex items-center gap-2">
+                    FULL PROCESS GALLERY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="space-y-6 group">
+<div class="aspect-[4/5] overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal hand-harvesting of quinoa plants in the Andes. A farmer in traditional clothing carefully handles the vibrant purple and red quinoa stalks under a bright, high-altitude sun. The image captures the texture of the dry soil and the vivid colors of the plant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbIbj8HxUHeOKAWh-dRJEuSmEDvetX_fp0FC6h1V59CF1M7haTMCwV84k_3r5dmRLK32w60tMZDf4x4KRJQJDNR1A3vMCwEiTiO0G4IX9QQuM680rWom6T2jVi8hETp91hES4f6NQEjDlKcJzIoJz7O3NFby-ktQWHmSulVjQa5wnyb9ZNoszySsIApEyCDrg18Co1qIpYECaUpp3ncx1tOvNTnzlSYOy0XzID_Y-9E5uV4ev9Zq2LTkZiDgZh9yGNQhIE3VSLCYY"/>
+</div>
+<div class="space-y-2">
+<span class="text-label-caps text-secondary-container bg-secondary px-2 py-0.5">01. HARVEST</span>
+<h4 class="font-headline-sm text-[20px]">Manual Gathering</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Ensuring each stalk is picked at its peak maturity without damaging the delicate seed structure.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="space-y-6 group">
+<div class="aspect-[4/5] overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="The traditional process of winnowing quinoa. Grains are tossed into the air using woven baskets, allowing the Andean wind to blow away the chaff. The scene is bright and airy, with golden dust particles dancing in the sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtYgvAdWaT9KENrw4l4_QEsv5Sj9CXHlSoJzv2dC3Hf1scrt6xiPaZ4NMOHK1PE3E4lyAXHbtRZnrqyDpu0r7mW4SrdyUYXd2uZRGt1DlInEqcfIZVjjiXa1NT3J6LMAqYw-64PYOz_N2K5RAFXFlnAtDqLUg76kOHFncxWoA3NSz-_cr_N_ELdPj1susP80K1NcHSceT9Fql8abBKpH1pMoKxA3Nfp0hbvwyZu42QulenhmmXcKERtFLrOF9Pf9oSwbkfC-owwEE"/>
+</div>
+<div class="space-y-2">
+<span class="text-label-caps text-secondary-container bg-secondary px-2 py-0.5">02. WINNOWING</span>
+<h4 class="font-headline-sm text-[20px]">Wind Purification</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The Altiplano winds naturally separate the chaff from the heavier, premium grains in a rhythmic outdoor ritual.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="space-y-6 group">
+<div class="aspect-[4/5] overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Quinoa grains spread out on large canvases under the intense sun of the high Andes for natural drying. The wide shot shows the pattern of different colored grains (white, red, black) drying in the clean mountain air. Minimalist and peaceful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu_lwaf4uhVNQB0uD4lNc-TTrAj3TPfmhgJquB6Bjj6RPbWVbiBqaWSex1LLN0DImJPTbEDdaqJYbuXuQmKZMIZ95c8B0_gwjZHzr4pVfq09Mlwa7jUxdwUyjcwXZrGqTorYVkiYZeMJrNBAgCz5R2NLZ_nv6AoktlXYRroDRTo4GJ6mzNHyKOcqJgv9-a8dQ8aUr_Q7zcmMYoauAzCOeesDDmmVHnu86RXh53zpZ9sf5vq6mjrWVo_52XRFICuCVIMTCLciUz1JY"/>
+</div>
+<div class="space-y-2">
+<span class="text-label-caps text-secondary-container bg-secondary px-2 py-0.5">03. CURING</span>
+<h4 class="font-headline-sm text-[20px]">Solar Dehydration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Natural sun drying preserves the essential oils and proteins that give Royal Quinoa its superior flavor profile.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Las Tres Variedades Comparison -->
+<section class="py-32 bg-surface-container-highest/30">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-center mb-20 italic">The Three Pillars</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 border border-outline-variant">
+<!-- Blanca -->
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant hover:bg-white transition-colors duration-500">
+<div class="h-48 mb-8">
+<img class="w-full h-full object-contain" data-alt="Extreme macro of Ivory White Quinoa grains, highlighting the spherical shape and pearlescent surface. Soft, bright lighting on a white marble background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWrYvZ_DxA7Qw2uLQgFLERwsXf3qeXllqSAN9HYskJyAil79dysa6a3uqPjAvtBQdIid1nu2ZcwqOgAOrkPLhMav2yAvmT7oFRYMoeCf4zLUXsoJin75zyDqPkgS6dDj8asVTSmwoPtJQRGAewt_40IfHklPFYSdLg1r3T18OGJROkRY-ekDQHGjwFwjOTgysUWXuvVfHwLmcomAbbO_UeknFQbn_GfIRUeqY8-UJDMfv6w8m2zwjIn_qEzHM6uzJxKaDnc_G32t0"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-4 mb-6">Blanca (Ivory)</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">water_drop</span> Mild, delicate flavor</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">restaurant</span> Ideal for risottos &amp; sides</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">timer</span> 12-15 min cook time</li>
+</ul>
+</div>
+<!-- Roja -->
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant hover:bg-white transition-colors duration-500">
+<div class="h-48 mb-8">
+<img class="w-full h-full object-contain" data-alt="Extreme macro of deep Red Quinoa grains, showing the rich terracotta hue and matte texture. Warm, focused lighting on a dark slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABU0F_vn9Y5T-5JneLzmRzs_VVzwTVE7QlRJcsn19RbimgSxTLIzGQs9tzSbW5oHCwIu1LVXfkJh2T6tnUemoeLEgNMUsA1S4DQy7_HONJ6NwWvserP8roDM0gnSIIxpyRdt8wjeHA4m3AywX72ERd2YPR0zSNJEZu2J76KCN4ZpwO-IkZtZ63FHnQ6AyuJENdfEbfZw5SIivJxWcrVkTt9-7J07afzgt3gxTvA4NDloMkpeaM5ik6WvNLE2E12sMH4TXjZ9d1yLk"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary border-b border-outline-variant pb-4 mb-6">Roja (Crimson)</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">water_drop</span> Nutty, robust flavor</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">restaurant</span> Best for salads &amp; cold bowls</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">timer</span> 18-20 min cook time</li>
+</ul>
+</div>
+<!-- Negra -->
+<div class="p-12 hover:bg-white transition-colors duration-500">
+<div class="h-48 mb-8">
+<img class="w-full h-full object-contain" data-alt="Extreme macro of jet Black Quinoa grains with occasional highlights of dark charcoal. Sophisticated high-contrast lighting on a raw concrete background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-HELSGM3gVHYb1_WyKmj8cBah-2iD6KXjfQLbgXGkzl5lcfgrnmnDdlF6Y7f6SMo1dXSzLrSSYDhJFv51QgZZ6L8SacNaX6sDc2R4o8-Bb0TEmwY1ztsisioHtlcZJRo88J9EtVEqxVSWULn9_uecGo50_O4sv4GC_yoOldpHCBXQ1VNVihVtK7Bpss3BKECOJxVS4SL7gNw1zPKUwSKRmravfDWKxjPcRlwc60fcm3SwmcNcC_XvI0BmK5ym18usX7Pyj5-6-s"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-4 mb-6">Negra (Obsidian)</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">water_drop</span> Earthy, slightly sweet</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">restaurant</span> Gourmet garnish &amp; crunch</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">timer</span> 20-22 min cook time</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Presentaciones Section -->
+<section class="py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-md text-headline-md mb-12">Retail &amp; Export Packaging</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Product Card -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container border border-outline-variant overflow-hidden mb-4 p-8 flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A premium 500g stand-up pouch of Moneylink Royal White Quinoa. The packaging is minimalist with a matte ivory finish and elegant sans-serif typography. Studio lighting on a neutral stone surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcVR5m3k6Oh35m_Fe6bkhnEymadgWf94JUCW25zGO5MPcuFmDhFWEOnFH0_EbRO6H_TV11N9CnSq_rso6pt1sDjFPmUiLw3aBiwUZUd4iV1RqQ4hkEbjbdZ9YyBYzcbGG3hKDqCp8MlMxF-3OeD6ozZ6jrymsKTgvI2hKwHqs-8lbFjniLd3u3eYUxj-HpvyfLjleVEHdOfmv2tb5QoL4pz9xg8QMccNKbX9-VmwfwNpXGUdWBIjjXYYpHsicLWrOvVMdcAAhhgJ8"/>
+</div>
+<p class="text-label-caps text-outline mb-1">500G POUCH</p>
+<h4 class="font-body-lg font-bold">Blanca Classic</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container border border-outline-variant overflow-hidden mb-4 p-8 flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A premium 500g stand-up pouch of Moneylink Royal Red Quinoa. The packaging is minimalist with a matte terracotta-red finish and refined gold foil accents. Professional studio shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCKl9lnX41XaZGvfbawH8sPT_M7Pfeo4KdXlQHlxJ-nwoGx4qKPc3xl3UxkN8Ne7ipqYL0zuazq_xu1EeAnOpHtWoqOTu62CZwwI0fc_plozN-UuZQ-3zGy4eaNRY-6eYj4bvBQ6thXPZcvevWIdpUTnjkn59ExdgXDxmJD0DivA7LyyhARKPL0xcSHrft3VgVjUgtHuEXcSatgXaGmlaYLfdtAmU9TfGVh6IgunnU9xosJOo_95BCqAcP9nJYU4979FSziXo0fg"/>
+</div>
+<p class="text-label-caps text-outline mb-1">500G POUCH</p>
+<h4 class="font-body-lg font-bold">Roja Intense</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container border border-outline-variant overflow-hidden mb-4 p-8 flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A luxury tasting box set featuring three glass jars containing white, red, and black quinoa. The box is made of textured dark charcoal paper with a blind-embossed Moneylink logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfM6xXrL6VLqK_LhA04hwQ7QOBR2ARrXVdme1fdext6xHDN3b_siiWdzgEUZ6RVP2RNe53S9p7BprVIYMthIkekO74X1w4G0VBW56arxU9GNDxL4uF6-vTeLP9iMbExd4PUUpyuPSasXuXt7zLczn1VYSsn8i5qpNm-Bl3oGqfxPsG4EUvq3CPBahakPr38921CzwR91QFMFj6rJOgzvUoVfCJwrjEWVk_o4OmLSLfUA88ngsbZxssYTJH5D_19pYUbzCHiWDGP04"/>
+</div>
+<p class="text-label-caps text-outline mb-1">GIFT SET</p>
+<h4 class="font-body-lg font-bold">The Triptych Collection</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container border border-outline-variant overflow-hidden mb-4 p-8 flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Bulk 25kg export sack of Royal Quinoa, made of high-quality woven craft paper with clean branding and certification stamps (Organic, Fair Trade). Industrial luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAElXah4SO7MxXP0H7b1OLE4YYHsLwJiEzxRVMjTFbsTZi5HpSVq5hZqt3J5p8CPOHXPBjitKXFrZ0vLIHwizSn1VUaVSvXJpf9uorBhd6prnZwyvWVqIj22ovS3lLExZ7jkWYjmoaaQsrVErRuHtt0NHxApQj0NKyhAtYrBGO3GdiCNCrdxwZqPvNS-_2DgJnQpxXSXefJbEWDyt0aAzssuNqFQ2u8YhyYl7RvibLQb0Hukcw-9W7rjU4TrhpTDj6LPTqLNKfL_zE"/>
+</div>
+<p class="text-label-caps text-outline mb-1">BULK EXPORT</p>
+<h4 class="font-body-lg font-bold">Industrial Volume</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Ficha Técnica Section -->
+<section class="py-32 bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex items-center gap-6 mb-16">
+<h2 class="font-display-lg text-4xl md:text-5xl">Technical Specs</h2>
+<div class="flex-grow h-px bg-on-primary/20"></div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-on-primary/30">
+<th class="py-6 text-label-caps opacity-60">Parameter</th>
+<th class="py-6 text-label-caps">Royal Blanca</th>
+<th class="py-6 text-label-caps">Royal Roja</th>
+<th class="py-6 text-label-caps">Royal Negra</th>
+</tr>
+</thead>
+<tbody class="font-body-md">
+<tr class="border-b border-on-primary/10 hover:bg-on-primary/5 transition-colors">
+<td class="py-6 font-bold">Grain Diameter</td>
+<td class="py-6">2.0mm - 2.2mm</td>
+<td class="py-6">1.8mm - 2.0mm</td>
+<td class="py-6">1.6mm - 1.8mm</td>
+</tr>
+<tr class="border-b border-on-primary/10 hover:bg-on-primary/5 transition-colors">
+<td class="py-6 font-bold">Protein Content</td>
+<td class="py-6">14.1%</td>
+<td class="py-6">15.4%</td>
+<td class="py-6">16.2%</td>
+</tr>
+<tr class="border-b border-on-primary/10 hover:bg-on-primary/5 transition-colors">
+<td class="py-6 font-bold">Saponin Level</td>
+<td class="py-6">&lt; 0.02% (Pre-washed)</td>
+<td class="py-6">&lt; 0.02% (Pre-washed)</td>
+<td class="py-6">&lt; 0.02% (Pre-washed)</td>
+</tr>
+<tr class="border-b border-on-primary/10 hover:bg-on-primary/5 transition-colors">
+<td class="py-6 font-bold">Certifications</td>
+<td class="py-6" colspan="3">Organic USDA, EU Bio, Non-GMO Project, Fair Trade Certified</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high full-width">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="md:col-span-4 space-y-8">
+<a class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary font-bold" href="#">Moneylink</a>
+<p class="font-body-md text-on-surface-variant max-w-xs">Connecting the world to the purest gourmet treasures of the Bolivian Andes.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+</div>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h5 class="text-label-caps text-primary">Sourcing</h5>
+<ul class="space-y-4 text-label-caps text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Chocolate</a></li>
+<li><a class="text-secondary" href="#">Quinua</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cerveza</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Origin Stories</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h5 class="text-label-caps text-primary">Compliance</h5>
+<ul class="space-y-4 text-label-caps text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Export Terms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Quality Control</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 bg-surface p-8 border border-outline-variant space-y-6">
+<h5 class="font-headline-sm text-xl">Global Inquiry</h5>
+<p class="font-body-md text-on-surface-variant">Interested in bringing Royal Quinoa to your market? Contact our export specialists.</p>
+<button class="w-full bg-tertiary text-on-tertiary px-6 py-4 text-label-caps hover:scale-105 transition-transform duration-300">
+                    REQUEST EXPORT CATALOG
+                </button>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/30 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-caps text-on-surface-variant opacity-60">© 2024 Moneylink Gourmet Exports. All rights reserved.</p>
+<div class="flex gap-8 text-label-caps text-on-surface-variant">
+<a class="hover:text-primary" href="#">PRIVACY</a>
+<a class="hover:text-primary" href="#">TERMS</a>
+</div>
+</div>
+</footer>
+<!-- Intersection Observer for reveal animations -->
+<script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body></html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #DED9D1, transparent);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-container": "#f0eee9",
+                        "on-surface": "#1b1c19",
+                        "on-secondary-fixed-variant": "#61401b",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2d2926",
+                        "secondary-fixed-dim": "#eebd8e",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-container-high": "#eae8e3",
+                        "tertiary-container": "#4b1b08",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6f3722",
+                        "inverse-primary": "#cdc5c0",
+                        "secondary-container": "#fdcb9b",
+                        "surface": "#fbf9f4",
+                        "surface-dim": "#dbdad5",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-secondary-container": "#79542d",
+                        "on-tertiary-container": "#c77f65",
+                        "primary": "#181512",
+                        "secondary-fixed": "#ffdcbd",
+                        "tertiary": "#2e0900",
+                        "on-primary-container": "#96908b",
+                        "surface-variant": "#e4e2dd",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container-low": "#f5f3ee",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#1e1b18",
+                        "on-primary-fixed-variant": "#4b4642",
+                        "on-surface-variant": "#4d4540",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-fixed": "#380d00",
+                        "inverse-surface": "#30312e",
+                        "primary-fixed": "#e9e1dc",
+                        "surface-tint": "#635d5a",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "background": "#fbf9f4",
+                        "on-background": "#1b1c19",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#cfc4bd",
+                        "secondary": "#7c5730",
+                        "primary-fixed-dim": "#cdc5c0",
+                        "outline": "#7e756f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky border-b border-outline-variant/30 dark:border-outline/20 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary dark:text-inverse-primary">
+                Moneylink
+            </div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary pb-1 text-label-caps font-label-caps uppercase tracking-widest" href="#">Chocolate</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300" href="#">Quinua</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300" href="#">Cerveza</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps uppercase tracking-widest hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300" href="#">Process</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-3 text-label-caps font-label-caps uppercase tracking-widest hover:scale-105 transition-all duration-300">
+                    Export Inquiry
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center pt-20 px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full" data-alt="A high-end editorial product photograph of raw, artisanal Bolivian chocolate paste resting on a dark, textured slate stone and a hand-carved mahogany wood surface. The lighting is dramatic and warm, emphasizing the rich, deep cacao brown and granular texture of the paste. Soft golden highlights catch the edges, creating a luxurious and authentic feel consistent with premium export goods. Minimalist composition with ample negative space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMixmCRXqrWF5eq6_hW9LE3lvYpGtN8lhUFg_d_jddcmzPYVgr7s1wVOFCX3pin-NklOF_M-VD2JcN7vxW3_UPDmGJLbn2QGVsDEl1Srk43FBvFWd_hrAV_5KGH2fsoY9X3-JploEQdEwa1hzY98ySPmLk6i7JrB3T0AHt-G8TH90xv--MUdKgYeMOaLqWpoDdYth2PDJcujIEaqVP1fWwNcXXli6Mk3dxE4Dscr_Y9LFSFHhS_VT9-Ju_MeBdio4TJ6FmA4-W9Gw')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface/90"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl reveal-on-scroll">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.3em] mb-4 block">Tesoro del Alto Beni</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">Chocolate en Pasta</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                Purity in its most tactile form. Our artisanal paste preserves the untamed essence of wild Bolivian cacao, stone-ground to perfection for the global gourmet market.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 text-label-caps font-label-caps uppercase tracking-[0.2em] hover:bg-on-surface-variant transition-all">Request Samples</button>
+<button class="border border-outline text-primary px-8 py-4 text-label-caps font-label-caps uppercase tracking-[0.2em] hover:bg-surface-container transition-all">Technical Specs</button>
+</div>
+</div>
+</section>
+<!-- Historia Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 reveal-on-scroll">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-6 block">Our Heritage</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Crafting Legacy from the Amazonian Floor</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    For generations, the families of Alto Beni have nurtured the wild cacao trees that thrive in the rich, humid soils of the Bolivian Amazon. This is not just chocolate; it is a cultural artifact.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Moneylink bridges this ancestral knowledge with the rigorous standards of international connoisseurs, ensuring that every batch of paste retains its soul while meeting the highest export quality.
+                </p>
+<div class="w-20 h-px bg-secondary"></div>
+</div>
+<div class="md:col-span-6 md:col-start-7 reveal-on-scroll">
+<div class="aspect-[4/5] relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125 sepia-[0.3]" data-alt="A warm, sepia-toned vintage-style photograph showing an elderly Bolivian cacao farmer's calloused hands carefully handling a ripe, yellow cacao pod in the dense foliage of the Alto Beni rainforest. The lighting is dappled, filtering through the jungle canopy, creating a moody and historic atmosphere that evokes a sense of heritage, authenticity, and refined craft." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKh6JMVrCWzP2c_vA7Pd02fx7S1ti5zOMFEda8PYe2BhgqhArAZOdOGcPI-3JjVPwFYRS2pAqmkyvZnSfmDA4M7c8DGqZmaem0cDnUl73ba4yMd4cKS0_sTwhKSUrNxZX-QgkzaiDgWTL_rbI58Ga5e7YTLja63VEMBvrPr_O-wCcPjWmShKfCLTIuzE0qRNLO5hc-13dHYkAO_poE6GHPISQKUdC7RsjPW436WpxMAqcFtsu4d0wd2sobgim48pSNH-lHbgv8LAA')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Origen Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/30">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center reveal-on-scroll">
+<h2 class="font-headline-md text-headline-md text-primary mb-16">The Sanctuary of Alto Beni</h2>
+<div class="relative max-w-4xl mx-auto">
+<!-- Placeholder for Minimal Line-art Map -->
+<div class="aspect-[16/9] flex items-center justify-center bg-surface rounded-xl border border-outline-variant/20 shadow-sm relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="w-full h-full" style="background-image: radial-gradient(#A67C52 1px, transparent 1px); background-size: 20px 20px;"></div>
+</div>
+<div class="relative z-10 text-center px-8">
+<span class="material-symbols-outlined text-secondary text-6xl mb-4">location_on</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Digital Cartography Rendering</p>
+<p class="text-headline-sm font-headline-sm text-primary mt-4">15°40'S 67°30'W</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">La Paz Department, Bolivia</p>
+</div>
+<!-- Decorative line art elements -->
+<div class="absolute top-10 left-10 w-24 h-24 border-t border-l border-secondary/40"></div>
+<div class="absolute bottom-10 right-10 w-24 h-24 border-b border-r border-secondary/40"></div>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-secondary">400m</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Average Elevation</p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-secondary">Wild Forest</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Cultivation Type</p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-secondary">Volcanic</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Soil Composition</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proceso Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20 reveal-on-scroll">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-4 block">Metamorphosis</span>
+<h2 class="font-headline-md text-headline-md text-primary">The Alchemy of Transformation</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal-on-scroll">
+<!-- Step 1 -->
+<div class="group">
+<div class="aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up macro shot of ripe cacao beans freshly extracted from a pod, covered in white mucilage. High-end lighting on a white marble surface, light-mode aesthetic, soft shadows, sophisticated beige and ivory tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXVnVCRoP-MyTbBopN8bk-6luhQr6aCi53tShj6UtPszckorRbs2mt-D-56hko6fhVBf80P_2K6fG7DGg0dzzerIkxXRXm-oTdZSqTDv3pghGZGCGzLwuCePUnZDnljrZf0h0-7jY4S-P7aBI2WmVQNfoMAgv4KESajfaDimhJjbYi4hdBJCirjRgKdsFodXX1nu8pcXWQNzjm5qrLmnuD4IimC8pGWTEN6yb927Uo2_K4ShW8sSylxlNnAt5Mxy0D8R2sZHSQ_AA"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-2 block">01 / Harvest</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Selection of prime wild beans during peak seasonality.</p>
+</div>
+<!-- Step 2 -->
+<div class="group">
+<div class="aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Roasted cacao beans being spread across a woven natural fiber mat. Sunlight catching the dark, cracked shells, warm earth tones, deep browns and terracotta accents, minimalist editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9HAJlwhdUwUZRMsYEsiblrt76-yxG-Mlz55_Esc1cSbMSjQS1s8vnJoIVN72jRo3cO-GE-WgxKcfZKR3ROVxmIdBhq8QD6nSa0s3bwRFZu5wTxnYhpRUpghjmmco1u6gO8KYzIdwFBZ4ZJhyAZ328oXhxB-h-q5SpglMKbaK9hlCIjhDltUCe5aAEK7bLCJCrqf7stVvaiVQYzTHggCEVEAB4EROM9BnHcHSmii9_xU8AoOZrFAfns20T0LdqTLWPuSuofhHhu5Y"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-2 block">02 / Roasting</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Controlled artisanal roasting to unlock deep aromatic notes.</p>
+</div>
+<!-- Step 3 -->
+<div class="group">
+<div class="aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Traditional stone grinding process of chocolate. The dark paste is being swirled by a stone tool, visceral texture, rich cacao brown color, minimalist aesthetic with high contrast and soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB19Yfl1PR6ijXg_V125lOzc4h1gKvYCxcEGTJfDQ9wgO3sw_cvCtCEZ3InMLkF491fkZR8itcCdh3suP0scLqS4YkmpcOKvgeJWcIixQnqsrMGgw7fPeJ2EWiwAMTKi2_JydQDNiR6jk-Xua4Sqd7m6DRAX6ecrrqUE0Mo-27qetAizQFGjtiWiZkosDMyX1iD-uuApzgRq3EU2I9mVn_Yj4BOS8lMkvREaFYUw3nc2sFw4-xE01zLs8HNxnZMv8I8j2vh1PWFLDg"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-2 block">03 / Grinding</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Cold stone grinding preserving volatile oils and texture.</p>
+</div>
+<!-- Step 4 -->
+<div class="group">
+<div class="aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Final blocks of artisanal chocolate paste wrapped in minimalist brown paper with a wax seal. Set against a clean, bright, off-white background. Luxury packaging design, professional studio photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdDqS5f51Fa86Z6YsCr1TMDJk-lf0wut7qMFdzwPIUfOe5R82GsFzlv9Am_VS99z6PNlE-AOn8OAHnG9PUo8lKjWBQMLoaQxC3R05rvieICzye2FdJZQggjWCEf-uzlzZ4YcKIH6NigIU44QWErY0StLoznMAZ-8vZx8SKoQyRWdsSBqzpR_3gI5I2E2tTEIqSp_b2kxu27OuU7WRUdfULs_oSBVEEFQyV5_9lWaR-W4enOQWcJtB4TQESshmYqYp3c1QAzDB8Fyc"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-2 block">04 / Curing</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Resting periods to stabilize the crystalline structure of the paste.</p>
+</div>
+</div>
+</section>
+<!-- Presentaciones Section -->
+<section class="py-32 bg-surface-container overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-16 reveal-on-scroll">Export Formats</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-on-scroll">
+<!-- 250g Card -->
+<div class="bg-surface border border-outline-variant/30 p-10 flex flex-col items-center hover:shadow-[0_12px_40px_rgba(45,41,38,0.04)] transition-all duration-500">
+<div class="w-24 h-24 mb-10 flex items-center justify-center border border-secondary/20 rounded-full">
+<span class="material-symbols-outlined text-secondary text-4xl">inventory_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">250g Format</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">RETAIL READY</p>
+<p class="font-body-md text-body-md text-center text-on-surface-variant mb-8">
+                        Individual vacuum-sealed units in kraft-finish paper. Perfect for specialty boutiques.
+                    </p>
+<button class="w-full border border-primary py-3 text-label-caps font-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">Select Format</button>
+</div>
+<!-- 500g Card -->
+<div class="bg-surface border border-outline-variant/30 p-10 flex flex-col items-center hover:shadow-[0_12px_40px_rgba(45,41,38,0.04)] transition-all duration-500 scale-105 z-10">
+<div class="w-24 h-24 mb-10 flex items-center justify-center bg-secondary/10 rounded-full">
+<span class="material-symbols-outlined text-secondary text-4xl">package_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">500g Format</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">GASTRONOMIC STANDARD</p>
+<p class="font-body-md text-body-md text-center text-on-surface-variant mb-8">
+                        The preferred size for high-end pastry chefs and chocolate artisans.
+                    </p>
+<button class="w-full bg-primary text-on-primary py-3 text-label-caps font-label-caps uppercase tracking-widest hover:bg-on-surface-variant transition-all">Select Format</button>
+</div>
+<!-- 1kg Card -->
+<div class="bg-surface border border-outline-variant/30 p-10 flex flex-col items-center hover:shadow-[0_12px_40px_rgba(45,41,38,0.04)] transition-all duration-500">
+<div class="w-24 h-24 mb-10 flex items-center justify-center border border-secondary/20 rounded-full">
+<span class="material-symbols-outlined text-secondary text-4xl">box_add</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">1kg Format</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">BULK PRODUCTION</p>
+<p class="font-body-md text-body-md text-center text-on-surface-variant mb-8">
+                        Industrial-grade packaging designed for large-scale manufacturing and blending.
+                    </p>
+<button class="w-full border border-primary py-3 text-label-caps font-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">Select Format</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Ficha Técnica Section -->
+<section class="py-32 px-margin-desktop max-w-4xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-16 reveal-on-scroll">Technical Specification</h2>
+<div class="border-t border-outline-variant reveal-on-scroll">
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Scientific Name</span>
+<span class="font-body-md text-body-md text-primary italic">Theobroma cacao L.</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Variety</span>
+<span class="font-body-md text-body-md text-primary">Criollo / Trinitario Hybrid (Wild)</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Origin</span>
+<span class="font-body-md text-body-md text-primary">Alto Beni, Bolivia</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cacao Content</span>
+<span class="font-body-md text-body-md text-primary">100% Pure Cocoa Mass</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Fat Content</span>
+<span class="font-body-md text-body-md text-primary">52% - 54% Natural Cocoa Butter</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Shelf Life</span>
+<span class="font-body-md text-body-md text-primary">24 Months (Optimal Storage)</span>
+</div>
+<div class="grid grid-cols-2 py-6 border-b border-outline-variant/30 items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Certification</span>
+<span class="font-body-md text-body-md text-primary">Organic / Fair Trade Ready</span>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-40 bg-primary-container text-on-primary text-center px-margin-desktop overflow-hidden relative">
+
+<div class="relative z-10 reveal-on-scroll">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-10">Bring the Bolivian Essence to Your Market</h2>
+<button class="bg-on-tertiary-container text-on-primary px-12 py-5 text-label-caps font-label-caps uppercase tracking-[0.3em] hover:scale-105 transition-all duration-500 shadow-2xl">
+                Export Inquiry
+            </button>
+<p class="mt-10 font-body-md text-on-primary-container max-w-xl mx-auto opacity-70">
+                Direct logistics from La Paz to Tokyo, New York, and London. Professional brokerage for boutique distributors.
+            </p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high full-width">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary mb-6">Moneylink</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Curating Bolivia's finest exports for the global high-end market. Authenticity, refined through modern standards.
+                </p>
+</div>
+<div class="md:col-span-2 md:col-start-7">
+<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Explorar</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps uppercase tracking-tighter" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps uppercase tracking-tighter" href="#">Origin Stories</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps uppercase tracking-tighter" href="#">Export Terms</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-caps uppercase tracking-tighter" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6 uppercase">Sede</h5>
+<p class="font-body-md text-on-surface-variant">
+                    La Paz, Bolivia<br/>
+                    Tokyo Office, Shibuya
+                </p>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 py-8 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Moneylink Gourmet Exports. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">language</span>
+</div></div></div></footer></body></html>

@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <script>((d)=>{if(localStorage.getItem("moneylink-theme")==="dark"||((!localStorage.getItem("moneylink-theme"))&&matchMedia("(prefers-color-scheme:dark)").matches))d.classList.add("dark")})(document.documentElement)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerveza Paceña | Moneylink</title>
+  <meta name="description" content="Cerveza Paceña, el emblema cervecero de Bolivia. Elaborada con agua de deshielo glacial de la Cordillera Real, disponible para exportación a Japón.">
+  <link rel="alternate" hreflang="es" href="../../es/productos/cerveza-pacena.html">
+  <link rel="alternate" hreflang="en" href="../../en/productos/cerveza-pacena.html">
+  <link rel="alternate" hreflang="ja" href="../../ja/productos/cerveza-pacena.html">
+<link rel="icon" type="image/png" href="../../assets/img/favicon.png">  <meta name="theme-color" content="#001C42">  <meta property="og:title" content="Cerveza Paceña | Moneylink">  <meta property="og:description" content="Cerveza Paceña, el emblema cervecero de Bolivia. Elaborada con agua de deshielo glacial de la Cordillera Real, disponible para exportación a Japón.">  <meta property="og:type" content="website">  <meta property="og:image" content="https://moneylink.com.bo/assets/img/products/pacena/hero-bg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Cerveza Pacena","description":"Cerveza boliviana elaborada con agua de deshielo glacial de la Cordillera Real","brand":{"@type":"Brand","name":"Moneylink"},"offers":{"@type":"Offer","availability":"https://schema.org/InStock"}}</script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header data-header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md transition-all duration-200 left-0 right-0">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-unit flex justify-between items-center">
+    <a href="../index.html" class="flex items-center gap-3">
+      <img src="../../assets/img/logo.png" alt="Money Link SRL" class="h-20 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center" aria-label="Navegación principal">
+      <ul class="pill-nav" id="pill-nav">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../nosotros.html">Nosotros</a></li>
+        <li><a href="../productos.html">Productos</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+        <li class="pill-nav__cursor" aria-hidden="true"></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-4">
+<button id="theme-toggle" data-theme-toggle class="theme-toggle hidden md:block" aria-label="Toggle theme" type="button"><span class="theme-toggle__knob"><svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.25" fill="currentColor"/><g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 2.5v2.5"/><path d="M12 19v2.5"/><path d="M4.22 4.22l1.77 1.77"/><path d="M18.01 18.01l1.77 1.77"/><path d="M2.5 12h2.5"/><path d="M19 12h2.5"/><path d="M4.22 19.78l1.77-1.77"/><path d="M18.01 5.99l1.77-1.77"/></g></svg><svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      <div class="relative hidden md:block">
+        <button id="lang-btn" class="text-secondary hover:text-primary transition-colors cursor-pointer font-body-sm text-body-sm flex items-center gap-1" aria-expanded="false" aria-haspopup="true">
+          ES <span class="material-symbols-outlined text-sm">expand_more</span>
+        </button>
+        <div id="lang-dropdown" class="lang-dropdown" role="menu">
+          <a href="../../es/productos/cerveza-pacena.html" role="menuitem" aria-current="page">Español</a>
+          <a href="../../en/productos/cerveza-pacena.html" role="menuitem">English</a>
+          <a href="../../ja/productos/cerveza-pacena.html" role="menuitem">日本語</a>
+        </div>
+      </div>
+      <a href="../contacto.html" class="hidden md:inline-flex btn-primary btn-primary--sm">Contactar</a>
+      <button id="nav-toggle" class="md:hidden text-primary p-1" aria-label="Abrir menú" aria-expanded="false">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+  <aside id="mobile-nav" class="mobile-nav" aria-label="Menú móvil">
+    <div class="mobile-nav__header">
+      <img src="../../assets/img/logo.png" alt="Money Link SRL" class="h-16 w-auto">
+      <button id="nav-close" class="text-secondary p-1" aria-label="Cerrar menú"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="mobile-nav__links">
+      <a href="../index.html"><span class="material-symbols-outlined text-lg">home</span> Inicio</a>
+      <a href="../nosotros.html"><span class="material-symbols-outlined text-lg">info</span> Nosotros</a>
+      <a href="../productos.html"><span class="material-symbols-outlined text-lg">inventory_2</span> Productos</a>
+      <a href="../contacto.html"><span class="material-symbols-outlined text-lg">mail</span> Contacto</a>
+    </div>
+    <div class="mobile-nav__footer">
+      <div class="mobile-nav__theme-row">
+        <span class="mobile-nav__theme-label">Tema</span>
+        <button data-theme-toggle class="theme-toggle" aria-label="Cambiar tema" type="button"><span class="theme-toggle__knob"><svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.25" fill="currentColor"/><g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 2.5v2.5"/><path d="M12 19v2.5"/><path d="M4.22 4.22l1.77 1.77"/><path d="M18.01 18.01l1.77 1.77"/><path d="M2.5 12h2.5"/><path d="M19 12h2.5"/><path d="M4.22 19.78l1.77-1.77"/><path d="M18.01 5.99l1.77-1.77"/></g></svg><svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      </div>
+      <div class="mobile-nav__langs">
+        <a href="../../es/productos/cerveza-pacena.html" aria-current="page">ES</a>
+        <a href="../../en/productos/cerveza-pacena.html">EN</a>
+        <a href="../../ja/productos/cerveza-pacena.html">JA</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative h-[85vh] min-h-[24rem] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center hero-bg-zoom" style="background-image: url('../../assets/img/hero.pacena.png')"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(105deg, rgba(0,12,30,0.82) 0%, rgba(0,12,30,0.58) 45%, rgba(0,12,30,0.22) 100%);"></div>
+      </div>
+      <div class="relative z-10 w-full max-w-container-max mx-auto px-4 md:px-margin-desktop text-white">
+        <div class="max-w-2xl">
+          <nav class="mb-6" aria-label="Migas de pan">
+            <ol class="flex items-center gap-2 font-body-sm text-body-sm text-white/40">
+              <li><a href="../index.html" class="hover:text-white transition-colors">Inicio</a></li>
+              <li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
+              <li><a href="../productos.html" class="hover:text-white transition-colors">Productos</a></li>
+              <li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
+              <li class="text-white/70 font-medium" aria-current="page">Cerveza Paceña</li>
+            </ol>
+          </nav>
+          <span class="font-label-caps text-label-caps tracking-[0.3em] text-white/40 mb-6 block" data-hero-animate="bottom" data-hero-delay="0">DESDE 1886</span>
+          <h1 class="font-headline-xl text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight" data-hero-stagger="char" data-hero-delay="0.15">Paceña: La Cumbre<br>de la Tradición</h1>
+          <p class="font-body-md text-lg text-white/50 max-w-md mb-10" data-hero-animate="bottom" data-hero-delay="0.8">Cerveza de alta montaña elaborada con agua pura de deshielo glacial, carácter único e historia inigualable.</p>
+          <div class="flex gap-4" data-hero-animate="bottom" data-hero-delay="1.1">
+            <a href="#herencia" class="btn-primary">Explorar Herencia</a>
+            <a href="#ficha" class="btn-ghost-inverted">Ficha Técnica</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERENCIA DEL ALTIPLANO -->
+    <section id="herencia" class="py-20 md:py-28">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div class="aspect-[4/3] overflow-hidden rounded-lg" data-reveal="slide-left">
+            <img src="../../assets/img/products/pacena/lata-andes-sunset.jpg" alt="Cerveza Paceña con los Andes al atardecer" class="w-full h-full object-cover" width="600" height="450" loading="lazy">
+          </div>
+          <div data-reveal="slide-right">
+            <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">NUESTRA HISTORIA</span>
+            <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-6 leading-tight">La Herencia del Altiplano</h2>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+              Nacida en el corazón de La Paz hace más de 130 años, Paceña es mucho más que una cerveza. Es la expresión líquida de Bolivia, el orgullo de un pueblo, una celebración embotellada que ha acompañado generaciones.
+            </p>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed mb-8">
+              Moneylink acerca esta herencia al mercado internacional, garantizando la misma calidad que ha convertido a Paceña en el símbolo de la tradición cervecera boliviana.
+            </p>
+            <div class="flex gap-12 pt-8 border-t border-outline-variant/20">
+              <div>
+                <span class="font-headline-xl text-3xl text-primary block">130+</span>
+                <span class="font-label-caps text-[11px] text-secondary uppercase tracking-wider">Años de historia</span>
+              </div>
+              <div>
+                <span class="font-headline-xl text-3xl text-primary block">25+</span>
+                <span class="font-label-caps text-[11px] text-secondary uppercase tracking-wider">Reconocimientos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EL SÍMBOLO — Iconografía de la marca -->
+    <section class="py-16 md:py-24 bg-surface-container-low border-y border-outline-variant/10">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="text-center mb-16" data-reveal>
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-2">El Símbolo</h2>
+          <p class="font-label-caps text-label-caps text-secondary tracking-[0.2em]">LA IDENTIDAD EN CADA DETALLE</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div class="text-center p-8 bg-white rounded-lg border border-outline-variant/20" data-reveal style="--reveal-index: 0">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4">shield</span>
+            <h3 class="font-headline-lg text-lg text-primary mb-3">La Corona</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Simboliza la suprema calidad de sus ingredientes y la posición de liderazgo absoluto en la tradición cervecera del país.</p>
+          </div>
+          <div class="text-center p-8 bg-white rounded-lg border border-outline-variant/20" data-reveal style="--reveal-index: 1">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4">landscape</span>
+            <h3 class="font-headline-lg text-lg text-primary mb-3">El Illimani</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed">La montaña guardiana de La Paz representa la pureza del agua de deshielo glacial utilizada en cada lote producido.</p>
+          </div>
+          <div class="text-center p-8 bg-white rounded-lg border border-outline-variant/20" data-reveal style="--reveal-index: 2">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4">draw</span>
+            <h3 class="font-headline-lg text-lg text-primary mb-3">La Escritura</h3>
+            <p class="font-body-sm text-body-sm text-secondary leading-relaxed">Su tipografía es un legado centenario, con personalidad propia. Sólida, reconocible y arraigada en la cultura boliviana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUREZA DESDE LAS CUMBRES -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div data-reveal="slide-right">
+            <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-4 block">PUREZA DE ORIGEN</span>
+            <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-6 leading-tight">Pureza desde las Cumbres</h2>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+              Nuestra planta cervecera se encuentra en La Paz, a 3,600 metros sobre el nivel del mar. Utilizamos agua pura de deshielo glacial de la Cordillera Real.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 font-body-sm text-body-sm text-secondary">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Filtrada naturalmente a través de estratos volcánicos andinos.
+              </li>
+              <li class="flex items-center gap-3 font-body-sm text-body-sm text-secondary">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Fermentación en frío optimizada para entornos de gran altitud.
+              </li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-1 gap-4" data-reveal="slide-left">
+            <div class="bg-primary text-white rounded-lg p-8">
+              <span class="font-label-caps text-[10px] tracking-[0.2em] text-white/50 block mb-2">UBICACIÓN</span>
+              <span class="font-headline-lg text-xl block mb-1">La Paz, Bolivia</span>
+              <span class="font-body-sm text-body-sm text-white/60">16.5000° S, 68.1500° W</span>
+            </div>
+            <div class="bg-primary text-white rounded-lg p-8">
+              <span class="font-label-caps text-[10px] tracking-[0.2em] text-white/50 block mb-2">ELEVACIÓN</span>
+              <span class="font-headline-xl text-4xl block mb-1">3,600</span>
+              <span class="font-body-sm text-body-sm text-white/60">Metros sobre el nivel del mar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA TÉCNICA -->
+    <section id="ficha" class="py-20 md:py-28">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+            <div class="lg:col-span-3" data-reveal="slide-right">
+              <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-8">Ficha Técnica</h2>
+              <div class="border border-outline-variant/30 rounded-lg overflow-hidden">
+                <table class="w-full">
+                  <tbody>
+                    <tr class="border-b border-outline-variant/20">
+                      <td class="px-6 py-4 bg-surface-container-low font-label-caps text-label-caps text-primary w-1/3">
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-base">local_bar</span> Tipo</span>
+                      </td>
+                      <td class="px-6 py-4 font-body-md text-body-md text-secondary">Pilsener Lager — 4.8% ABV</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/20">
+                      <td class="px-6 py-4 bg-surface-container-low font-label-caps text-label-caps text-primary">
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-base">location_on</span> Origen</span>
+                      </td>
+                      <td class="px-6 py-4 font-body-md text-body-md text-secondary">La Paz, Bolivia — 3,600 msnm</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/20">
+                      <td class="px-6 py-4 bg-surface-container-low font-label-caps text-label-caps text-primary">
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-base">inventory_2</span> Formato</span>
+                      </td>
+                      <td class="px-6 py-4 font-body-md text-body-md text-secondary">Botella 350ml, 620ml; lata 355ml — cajas de 12 y 24</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/20">
+                      <td class="px-6 py-4 bg-surface-container-low font-label-caps text-label-caps text-primary">
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-base">restaurant</span> Perfil</span>
+                      </td>
+                      <td class="px-6 py-4 font-body-md text-body-md text-secondary">Cuerpo ligero, amargor equilibrado, notas de malta tostada</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 bg-surface-container-low font-label-caps text-label-caps text-primary">
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-base">verified</span> Estado</span>
+                      </td>
+                      <td class="px-6 py-4 font-body-md text-body-md text-secondary">
+                        <span class="inline-flex items-center gap-1.5">
+                          <span class="w-2 h-2 bg-green-600 rounded-full"></span>
+                          Disponible — licencia de distribución internacional
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="lg:col-span-2 flex justify-center" data-reveal="slide-left">
+              <div class="bg-primary text-white rounded-lg p-8 text-center w-full">
+                <span class="material-symbols-outlined text-5xl mb-4 text-white/80">workspace_premium</span>
+                <h3 class="font-headline-lg text-xl mb-2">Monde Sélection Gold</h3>
+                <p class="font-body-sm text-body-sm text-white/60 mb-6">Reconocida internacionalmente por su pureza y equilibrio excepcional.</p>
+                <a href="../contacto.html" class="btn-primary" style="background:#fff; color:#084C95; border-color:#fff;">
+                  Solicitar Cotización
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL — Lleva el espíritu de los Andes -->
+    <section class="py-20 md:py-28" style="background:#001C42;">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop text-center text-white">
+        <h2 class="font-headline-xl text-3xl md:text-5xl mb-6 leading-tight" data-reveal>Lleva el Espíritu de los<br>Andes a tu Mercado</h2>
+        <p class="font-body-md text-body-md text-white/50 max-w-lg mx-auto mb-10" data-reveal>Únete a nuestra red de distribución premium internacional y acerca la excelencia de Moneylink a tus consumidores.</p>
+        <a href="../contacto.html" class="btn-primary" data-reveal>
+          <span class="material-symbols-outlined text-lg">mail</span> Solicitar Catálogo de Exportación
+        </a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS RELACIONADOS -->
+    <section class="bg-surface-container-low border-y border-outline-variant/20">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-12 md:py-20">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-8 md:mb-12" data-reveal>Otros Productos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-gutter">
+          <a href="quinua-real.html" class="group product-card flex flex-col h-full transition-all duration-300 block" data-reveal="product" style="--reveal-index: 0">
+            <div class="relative aspect-[1.34] overflow-hidden bg-surface-container rounded-lg mb-6">
+              <img class="product-image object-cover w-full h-full transition-transform duration-700" alt="Quinua Real Orgánica" src="../../assets/img/products/quinua/variedades.jpg" loading="lazy" width="400" height="300">
+            </div>
+            <div class="flex flex-col flex-grow px-2">
+              <h3 class="font-headline-lg text-headline-lg text-primary mb-3">Quinua Real Orgánica</h3>
+              <p class="font-body-sm text-body-sm text-secondary mb-6 leading-relaxed">El grano de oro de los Andes con certificación orgánica internacional.</p>
+              <div class="mt-auto pt-4 border-t border-outline-variant/20">
+                <span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary group-hover:gap-4 transition-all duration-300">Ver ficha <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="cacao-pasta.html" class="group product-card flex flex-col h-full transition-all duration-300 block" data-reveal="product" style="--reveal-index: 1">
+            <div class="relative aspect-[1.34] overflow-hidden bg-surface-container rounded-lg mb-6">
+              <img class="product-image object-cover w-full h-full transition-transform duration-700" alt="Cacao en Pasta" src="../../assets/img/products/cacao/vainas-hojas.jpg" loading="lazy" width="400" height="300">
+            </div>
+            <div class="flex flex-col flex-grow px-2">
+              <h3 class="font-headline-lg text-headline-lg text-primary mb-3">Cacao en Pasta</h3>
+              <p class="font-body-sm text-body-sm text-secondary mb-6 leading-relaxed">Cacao amazónico puro de aroma intenso y calidad gourmet.</p>
+              <div class="mt-auto pt-4 border-t border-outline-variant/20">
+                <span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary group-hover:gap-4 transition-all duration-300">Ver ficha <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-12 md:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 mb-12">
+        <div class="md:col-span-1">
+          <img src="../../assets/img/logo.png" alt="Money Link SRL" class="h-16 w-auto mb-4">
+          <p class="font-body-sm text-body-sm text-secondary">Exportando la autenticidad de Bolivia hacia Japón con calidad, confianza y compromiso comercial.</p>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Navegación</h4>
+          <ul class="space-y-2">
+            <li><a href="../index.html" class="text-secondary hover:text-primary text-sm transition-colors">Inicio</a></li>
+            <li><a href="../nosotros.html" class="text-secondary hover:text-primary text-sm transition-colors">Nosotros</a></li>
+            <li><a href="../productos.html" class="text-secondary hover:text-primary text-sm transition-colors">Productos</a></li>
+            <li><a href="../contacto.html" class="text-secondary hover:text-primary text-sm transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Productos</h4>
+          <ul class="space-y-2">
+            <li><a href="quinua-real.html" class="text-secondary hover:text-primary text-sm transition-colors">Quinua Real Orgánica</a></li>
+            <li><a href="cerveza-pacena.html" class="text-secondary hover:text-primary text-sm transition-colors">Cerveza Paceña</a></li>
+            <li><a href="cacao-pasta.html" class="text-secondary hover:text-primary text-sm transition-colors">Cacao en Pasta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="footer-legal-link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer-legal-link">Términos de Uso</a></li>
+            <li><a href="#" class="footer-legal-link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">mail</span> contacto@moneylink.com.bo</li>
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">call</span> +591 2 243 0000</li>
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">location_on</span> Santa Cruz, Bolivia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cert-strip">
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">verified_user</span>
+              <span class="cert-badge__label">HACCP<br>Certified</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">eco</span>
+              <span class="cert-badge__label">Organic<br>Certified</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">policy</span>
+              <span class="cert-badge__label">JAS<br>Compliant</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">public</span>
+              <span class="cert-badge__label">Bolivia<br>Export Reg.</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">workspace_premium</span>
+              <span class="cert-badge__label">Fair<br>Trade</span>
+            </div>
+          </div>
+          <div class="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-body-sm text-body-sm text-secondary">&copy; <span data-year></span> Moneylink S.R.L. Todos los derechos reservados.</p>
+        <p class="text-xs text-secondary opacity-60 mt-1">Empresa registrada en Bolivia &middot; Exportaciones verificadas &middot; Santa Cruz, Bolivia</p>
+        <div class="flex items-center gap-6">
+          <!-- Social Media -->
+          <div class="flex items-center gap-3">
+            <a href="#" aria-label="LinkedIn (próximamente)" aria-disabled="true" tabindex="-1" class="text-secondary opacity-40 cursor-not-allowed pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram (próximamente)" aria-disabled="true" tabindex="-1" class="text-secondary opacity-40 cursor-not-allowed pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        <div class="flex gap-4">
+          <a href="../../es/productos/cerveza-pacena.html" class="text-primary font-bold text-sm" aria-current="page">ES</a>
+          <span class="text-outline-variant">|</span>
+          <a href="../../en/productos/cerveza-pacena.html" class="text-secondary hover:text-primary text-sm transition-colors">EN</a>
+          <span class="text-outline-variant">|</span>
+          <a href="../../ja/productos/cerveza-pacena.html" class="text-secondary hover:text-primary text-sm transition-colors">JA</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

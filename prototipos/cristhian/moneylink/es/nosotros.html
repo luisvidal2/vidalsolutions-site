@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <script>((d)=>{if(localStorage.getItem("moneylink-theme")==="dark"||((!localStorage.getItem("moneylink-theme"))&&matchMedia("(prefers-color-scheme:dark)").matches))d.classList.add("dark")})(document.documentElement)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Moneylink</title>
+  <meta name="description" content="Conoce la historia de Moneylink: exportacion profesional de productos bolivianos autenticos hacia Japon. Mision, vision y valores.">
+  <link rel="alternate" hreflang="es" href="../es/nosotros.html">
+  <link rel="alternate" hreflang="en" href="../en/nosotros.html">
+  <link rel="alternate" hreflang="ja" href="../ja/nosotros.html">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">  <meta name="theme-color" content="#001C42">  <meta property="og:title" content="Nosotros | Moneylink">  <meta property="og:description" content="Conoce la historia de Moneylink: exportacion profesional de productos bolivianos autenticos hacia Japon. Mision, vision y valores.">  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header data-header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md transition-all duration-200 left-0 right-0">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-unit flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="../assets/img/logo.png" alt="Money Link SRL" class="h-20 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center" aria-label="Navegación principal">
+      <ul class="pill-nav" id="pill-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li class="pill-nav__cursor" aria-hidden="true"></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-4">
+<button id="theme-toggle" data-theme-toggle class="theme-toggle hidden md:block" aria-label="Toggle theme" type="button"><span class="theme-toggle__knob"><svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.25" fill="currentColor"/><g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 2.5v2.5"/><path d="M12 19v2.5"/><path d="M4.22 4.22l1.77 1.77"/><path d="M18.01 18.01l1.77 1.77"/><path d="M2.5 12h2.5"/><path d="M19 12h2.5"/><path d="M4.22 19.78l1.77-1.77"/><path d="M18.01 5.99l1.77-1.77"/></g></svg><svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      <div class="relative hidden md:block">
+        <button id="lang-btn" class="text-secondary hover:text-primary transition-colors cursor-pointer font-body-sm text-body-sm flex items-center gap-1" aria-expanded="false" aria-haspopup="true">
+          ES <span class="material-symbols-outlined text-sm">expand_more</span>
+        </button>
+        <div id="lang-dropdown" class="lang-dropdown" role="menu">
+          <a href="../es/nosotros.html" role="menuitem" aria-current="page">Espanol</a>
+          <a href="../en/nosotros.html" role="menuitem">English</a>
+          <a href="../ja/nosotros.html" role="menuitem">日本語</a>
+        </div>
+      </div>
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary btn-primary--sm">Contactar</a>
+      <button id="nav-toggle" class="md:hidden text-primary p-1" aria-label="Abrir menu" aria-expanded="false">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+  <aside id="mobile-nav" class="mobile-nav" aria-label="Menu movil">
+    <div class="mobile-nav__header">
+      <img src="../assets/img/logo.png" alt="Money Link SRL" class="h-16 w-auto">
+      <button id="nav-close" class="text-secondary p-1" aria-label="Cerrar menu"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="mobile-nav__links">
+      <a href="index.html"><span class="material-symbols-outlined text-lg">home</span> Inicio</a>
+      <a href="nosotros.html" aria-current="page"><span class="material-symbols-outlined text-lg">info</span> Nosotros</a>
+      <a href="productos.html"><span class="material-symbols-outlined text-lg">inventory_2</span> Productos</a>
+      <a href="contacto.html"><span class="material-symbols-outlined text-lg">mail</span> Contacto</a>
+    </div>
+    <div class="mobile-nav__footer">
+      <div class="mobile-nav__theme-row">
+        <span class="mobile-nav__theme-label">Tema</span>
+        <button data-theme-toggle class="theme-toggle" aria-label="Cambiar tema" type="button"><span class="theme-toggle__knob"><svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.25" fill="currentColor"/><g stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 2.5v2.5"/><path d="M12 19v2.5"/><path d="M4.22 4.22l1.77 1.77"/><path d="M18.01 18.01l1.77 1.77"/><path d="M2.5 12h2.5"/><path d="M19 12h2.5"/><path d="M4.22 19.78l1.77-1.77"/><path d="M18.01 5.99l1.77-1.77"/></g></svg><svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      </div>
+      <div class="mobile-nav__langs">
+        <a href="../es/nosotros.html" aria-current="page">ES</a>
+        <a href="../en/nosotros.html">EN</a>
+        <a href="../ja/nosotros.html">JA</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="pt-[72px]">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <span class="breadcrumb__item"><a href="index.html">Inicio</a></span>
+        <span class="breadcrumb__sep material-symbols-outlined" aria-hidden="true">chevron_right</span>
+        <span class="breadcrumb__item breadcrumb__item--current" aria-current="page">Nosotros</span>
+      </nav>
+    </div>
+    <!-- COMPANY STORY -->
+    <section class="py-20 md:py-[clamp(4rem,8vw,8rem)]">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="max-w-3xl mx-auto text-center mb-16" data-reveal="blur">
+          <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-6 block">Nuestro Comienzo</span>
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-8 leading-tight">El inicio de un puente entre Bolivia y Japon</h2>
+          <div class="w-12 h-1 bg-primary-container mx-auto mb-10"></div>
+        </div>
+        <div class="max-w-3xl mx-auto" data-reveal>
+          <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+            Moneylink nace con una vision clara: profesionalizar la exportacion de productos bolivianos autenticos hacia uno de los mercados mas exigentes del mundo. Entendemos que el mercado japones no solo busca productos de calidad excepcional, sino historias de integridad, procesos transparentes y un profundo respeto por el origen de cada articulo.
+          </p>
+          <p class="font-body-md text-body-md text-secondary leading-relaxed mb-6">
+            Cada producto que seleccionamos cuenta la historia de una tierra rica en tradiciones ancestrales: la quinua real cultivada a mas de 3,600 metros sobre el nivel del mar en el Altiplano, el cacao silvestre recolectado en la Amazonia boliviana, las cervezas elaboradas con agua de deshielo glacial y los singanis destilados a partir de uvas de altura unicas en el mundo.
+          </p>
+          <p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Moneylink nace como el puente definitivo entre productores bolivianos comprometidos con la excelencia y compradores japoneses que valoran la autenticidad. Nuestro equipo bilingue y nuestra dedicacion a comprender ambas culturas comerciales nos impulsa a construir operaciones fluidas, transparentes y mutuamente beneficiosas desde el primer dia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="py-16 md:py-[clamp(3rem,6vw,6rem)] bg-surface-container-low border-y border-outline-variant/10">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="flex flex-col items-center mb-16 text-center" data-reveal="blur">
+          <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-[0.2em]">PROPOSITO</span>
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary">Mision y Vision</h2>
+          <div class="w-12 h-1 bg-primary-container mt-6"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+          <!-- Mision -->
+          <div class="bg-white border border-outline-variant/20 rounded-lg p-8 md:p-10" data-reveal style="--reveal-index: 0">
+            <div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-6 border border-outline-variant/30">
+              <span class="material-symbols-outlined text-primary text-2xl">flag</span>
+            </div>
+            <h3 class="font-headline-lg text-2xl text-primary mb-4">Mision</h3>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Liderar la exportacion premium de productos bolivianos garantizando sostenibilidad, comercio justo y la maxima calidad en cada envio. Actuamos como el enlace confiable entre productores bolivianos de excelencia y el exigente mercado japones.
+            </p>
+          </div>
+          <!-- Vision -->
+          <div class="bg-white border border-outline-variant/20 rounded-lg p-8 md:p-10" data-reveal style="--reveal-index: 1">
+            <div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center mb-6 border border-outline-variant/30">
+              <span class="material-symbols-outlined text-primary text-2xl">visibility</span>
+            </div>
+            <h3 class="font-headline-lg text-2xl text-primary mb-4">Vision</h3>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Ser el aliado estrategico numero uno para empresas niponas interesadas en productos autenticos de Sudamerica. Aspiramos a que cada consumidor japones reconozca la marca Bolivia como sinonimo de calidad, pureza y tradicion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="py-20 md:py-[clamp(4rem,8vw,8rem)]">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="flex flex-col items-center mb-16 md:mb-20 text-center" data-reveal="blur">
+          <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-[0.2em]">LO QUE NOS DEFINE</span>
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary">Nuestros Valores</h2>
+          <div class="w-12 h-1 bg-primary-container mt-6"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <!-- Autenticidad -->
+          <div class="flex flex-col items-center text-center group" data-reveal style="--reveal-index: 0">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-8 border border-outline-variant/20 group-hover:scale-110 transition-transform shadow-sm">
+              <span class="material-symbols-outlined text-primary text-4xl">eco</span>
+            </div>
+            <h3 class="font-headline-lg text-xl text-primary mb-3">Autenticidad</h3>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed max-w-sm">
+              Cada producto que exportamos es genuinamente boliviano, con trazabilidad completa desde su origen hasta el destino final. No aceptamos imitaciones ni compromisos con la procedencia.
+            </p>
+          </div>
+          <!-- Calidad -->
+          <div class="flex flex-col items-center text-center group" data-reveal style="--reveal-index: 1">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-8 border border-outline-variant/20 group-hover:scale-110 transition-transform shadow-sm">
+              <span class="material-symbols-outlined text-primary text-4xl">verified</span>
+            </div>
+            <h3 class="font-headline-lg text-xl text-primary mb-3">Calidad</h3>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed max-w-sm">
+              Aplicamos controles rigurosos en cada etapa del proceso exportador. Nuestros estandares cumplen y superan las regulaciones sanitarias de ambos paises, asegurando la excelencia constante.
+            </p>
+          </div>
+          <!-- Compromiso -->
+          <div class="flex flex-col items-center text-center group" data-reveal style="--reveal-index: 2">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-8 border border-outline-variant/20 group-hover:scale-110 transition-transform shadow-sm">
+              <span class="material-symbols-outlined text-primary text-4xl">handshake</span>
+            </div>
+            <h3 class="font-headline-lg text-xl text-primary mb-3">Compromiso</h3>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed max-w-sm">
+              Cada relacion comercial se construye sobre la confianza mutua y el cumplimiento. Nos comprometemos con la sostenibilidad, el comercio justo y el desarrollo de las comunidades productoras bolivianas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOLIVIA-JAPAN CONNECTION -->
+    <section class="py-20 md:py-[clamp(4rem,8vw,8rem)] bg-surface-container overflow-hidden">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="flex flex-col md:flex-row gap-12 md:gap-[clamp(2rem,5vw,6rem)] items-center">
+          <div class="w-full md:w-1/2" data-reveal="slide-right">
+            <span class="font-label-caps text-label-caps text-primary tracking-widest mb-6 block">CONEXION INTERCULTURAL</span>
+            <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-8 leading-tight">Bolivia y Japon: Dos Culturas, Una Mision</h2>
+            <p class="font-body-md text-body-md text-secondary mb-6 leading-relaxed">
+              La relacion entre Bolivia y Japon va mucho mas alla de lo comercial. Existe una historia compartida de migracion, intercambio cultural y respeto mutuo que Moneylink honra en cada operacion. La comunidad boliviana en Japon es un puente vivo entre ambas naciones.
+            </p>
+            <p class="font-body-md text-body-md text-secondary mb-6 leading-relaxed">
+              Entendemos la precision y la exigencia del mercado japones porque formamos parte de esa cultura. Al mismo tiempo, conocemos de primera mano la riqueza, la diversidad y el potencial de los productos bolivianos. Esta doble perspectiva nos convierte en el socio ideal para conectar ambos mundos.
+            </p>
+            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Cada embarque que coordinamos no es solo un envio comercial: es una embajada cultural que lleva consigo el sabor, la historia y la identidad de Bolivia al corazon de Japon.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2 relative" data-reveal="slide-left">
+            <div class="grid grid-cols-2 gap-4" data-reveal-stagger>
+              <div class="stat-card" data-reveal style="--reveal-index: 0">
+                <div class="stat-card__icon-wrap"><span class="material-symbols-outlined">rocket_launch</span></div>
+                <span class="font-headline-xl text-4xl text-primary block mb-1">2025</span>
+                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Ano de fundacion</p>
+              </div>
+              <div class="stat-card" data-reveal style="--reveal-index: 1">
+                <div class="stat-card__icon-wrap"><span class="material-symbols-outlined">inventory_2</span></div>
+                <span class="font-headline-xl text-4xl text-primary block mb-1" data-counter="3">3</span>
+                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Productos de exportacion</p>
+              </div>
+              <div class="stat-card" data-reveal style="--reveal-index: 2">
+                <div class="stat-card__icon-wrap"><span class="material-symbols-outlined">public</span></div>
+                <span class="font-headline-xl text-4xl text-primary block mb-1" data-counter="2">2</span>
+                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Paises conectados</p>
+              </div>
+              <div class="stat-card" data-reveal style="--reveal-index: 3">
+                <div class="stat-card__icon-wrap"><span class="material-symbols-outlined">track_changes</span></div>
+                <span class="font-headline-xl text-4xl text-primary block mb-1" data-counter="100" data-counter-suffix="%">100%</span>
+                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Trazabilidad de origen</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM CAROUSEL -->
+    <section class="py-20 md:py-[clamp(4rem,8vw,8rem)] border-t border-outline-variant/10">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="flex flex-col items-center mb-16 md:mb-20 text-center" data-reveal="blur">
+          <span class="font-label-caps text-label-caps text-primary mb-4 block tracking-[0.2em]">LAS PERSONAS DETRÁS DE MONEYLINK</span>
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary">Nuestro Equipo</h2>
+          <div class="w-12 h-1 bg-primary-container mt-6"></div>
+        </div>
+        <script type="application/json" id="team-data">[
+          {
+            "name": "[Nombre Apellido]",
+            "designation": "Director General",
+            "quote": "Visionario y líder del proyecto Moneylink. Con determinación y pasión por conectar Bolivia y Japón a través de productos auténticos de alta calidad. Impulsa la estrategia de exportación desde el primer día.",
+            "src": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop&crop=face"
+          },
+          {
+            "name": "[Nombre Apellido]",
+            "designation": "Directora Comercial",
+            "quote": "Especialista en desarrollo de negocios y relaciones comerciales internacionales. Conecta a productores bolivianos con distribuidores y compradores en Japón, construyendo alianzas duraderas basadas en la confianza y el beneficio mutuo.",
+            "src": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=face"
+          },
+          {
+            "name": "[Nombre Apellido]",
+            "designation": "Gerente de Logística",
+            "quote": "Responsable de la cadena de suministro y operaciones de exportación. Garantiza que cada producto boliviano llegue a Japón en condiciones óptimas, coordinando cada detalle desde el embalaje hasta la entrega final.",
+            "src": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop&crop=face"
+          }
+        ]</script>
+        <div class="flex items-center justify-center">
+          <div class="team-carousel" id="team-carousel">
+            <div class="team-carousel__grid">
+              <div class="team-carousel__images"></div>
+              <div class="team-carousel__content">
+                <div class="team-carousel__text">
+                  <h3 class="team-carousel__name"></h3>
+                  <p class="team-carousel__role"></p>
+                  <p class="team-carousel__desc"></p>
+                </div>
+                <div class="team-carousel__arrows">
+                  <button class="team-carousel__arrow" id="team-prev" aria-label="Miembro anterior">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                  </button>
+                  <button class="team-carousel__arrow" id="team-next" aria-label="Siguiente miembro">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-[clamp(4rem,8vw,8rem)]">
+      <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+        <div class="bg-primary p-8 md:p-20 rounded shadow-2xl text-center md:text-left md:flex md:items-center md:justify-between gap-12">
+          <div class="text-white mb-8 md:mb-0 md:max-w-lg">
+            <h2 class="font-headline-xl text-headline-lg-mobile md:text-4xl mb-4">Trabajemos juntos</h2>
+            <p class="opacity-70">Descubra como Moneylink puede convertirse en su aliado estrategico para importar lo mejor de Bolivia hacia Japon.</p>
+          </div>
+          <a href="contacto.html" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-primary-fixed transition-colors">
+            CONTACTAR AHORA <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-12 md:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 mb-12">
+        <div class="md:col-span-1">
+          <img src="../assets/img/logo.png" alt="Money Link SRL" class="h-16 w-auto mb-4">
+          <p class="font-body-sm text-body-sm text-secondary">Exportando la autenticidad de Bolivia hacia Japon con calidad, confianza y compromiso comercial.</p>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Navegacion</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-secondary hover:text-primary text-sm transition-colors">Inicio</a></li>
+            <li><a href="nosotros.html" class="text-secondary hover:text-primary text-sm transition-colors">Nosotros</a></li>
+            <li><a href="productos.html" class="text-secondary hover:text-primary text-sm transition-colors">Productos</a></li>
+            <li><a href="contacto.html" class="text-secondary hover:text-primary text-sm transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Productos</h4>
+          <ul class="space-y-2">
+            <li><a href="productos/quinua-real.html" class="text-secondary hover:text-primary text-sm transition-colors">Quinua Real Organica</a></li>
+            <li><a href="productos/cerveza-pacena.html" class="text-secondary hover:text-primary text-sm transition-colors">Cerveza Pacena</a></li>
+            <li><a href="productos/cacao-pasta.html" class="text-secondary hover:text-primary text-sm transition-colors">Cacao en Pasta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="footer-legal-link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer-legal-link">Términos de Uso</a></li>
+            <li><a href="#" class="footer-legal-link">Política de Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-caps text-label-caps text-primary mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">mail</span> contacto@moneylink.com.bo</li>
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">call</span> +591 2 243 0000</li>
+            <li class="flex items-center gap-2 text-secondary text-sm"><span class="material-symbols-outlined text-base">location_on</span> Santa Cruz, Bolivia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cert-strip">
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">verified_user</span>
+              <span class="cert-badge__label">HACCP<br>Certified</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">eco</span>
+              <span class="cert-badge__label">Organic<br>Certified</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">policy</span>
+              <span class="cert-badge__label">JAS<br>Compliant</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">public</span>
+              <span class="cert-badge__label">Bolivia<br>Export Reg.</span>
+            </div>
+            <div class="cert-divider" aria-hidden="true"></div>
+            <div class="cert-badge">
+              <span class="material-symbols-outlined cert-badge__icon">workspace_premium</span>
+              <span class="cert-badge__label">Fair<br>Trade</span>
+            </div>
+          </div>
+          <div class="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-body-sm text-body-sm text-secondary">&copy; <span data-year></span> Moneylink S.R.L. Todos los derechos reservados.</p>
+        <p class="text-xs text-secondary opacity-60 mt-1">Empresa registrada en Bolivia &middot; Exportaciones verificadas &middot; Santa Cruz, Bolivia</p>
+        <div class="flex items-center gap-6">
+          <!-- Social Media -->
+          <div class="flex items-center gap-3">
+            <a href="#" aria-label="LinkedIn (próximamente)" aria-disabled="true" tabindex="-1" class="text-secondary opacity-40 cursor-not-allowed pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram (próximamente)" aria-disabled="true" tabindex="-1" class="text-secondary opacity-40 cursor-not-allowed pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        <div class="flex gap-4">
+          <a href="../es/nosotros.html" class="text-primary font-bold text-sm" aria-current="page">ES</a>
+          <span class="text-outline-variant">|</span>
+          <a href="../en/nosotros.html" class="text-secondary hover:text-primary text-sm transition-colors">EN</a>
+          <span class="text-outline-variant">|</span>
+          <a href="../ja/nosotros.html" class="text-secondary hover:text-primary text-sm transition-colors">JA</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

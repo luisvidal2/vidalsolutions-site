@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moneylink | De Bolivia al Mundo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "primary": "#43271a",
+                    "on-primary-container": "#d3a895",
+                    "background": "#faf9f6",
+                    "tertiary-fixed": "#d0ebb6",
+                    "primary-fixed-dim": "#eabda9",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#e5e2dd",
+                    "secondary-fixed": "#e5e2dd",
+                    "on-primary-fixed-variant": "#5f3f30",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#5c3d2e",
+                    "secondary": "#5f5e5b",
+                    "tertiary-fixed-dim": "#b4cf9c",
+                    "outline-variant": "#d4c3bc",
+                    "on-tertiary-container": "#9fb988",
+                    "tertiary": "#1e330f",
+                    "surface-dim": "#dbdad7",
+                    "on-secondary-fixed-variant": "#474743",
+                    "primary-fixed": "#ffdbcc",
+                    "surface-container-low": "#f4f3f1",
+                    "on-surface-variant": "#50443f",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#2d1509",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#344a23",
+                    "surface-tint": "#795746",
+                    "on-secondary-fixed": "#1c1c19",
+                    "surface": "#faf9f6",
+                    "inverse-primary": "#eabda9",
+                    "surface-container-highest": "#e3e2e0",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "on-tertiary-fixed-variant": "#374d26",
+                    "surface-container-high": "#e9e8e5",
+                    "on-tertiary-fixed": "#0c2001",
+                    "on-secondary-container": "#656461",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f1ee",
+                    "surface-variant": "#e3e20",
+                    "surface-bright": "#faf9f6",
+                    "on-surface": "#1a1c1a",
+                    "surface-container": "#efeeeb",
+                    "outline": "#82746e",
+                    "on-background": "#1a1c1a",
+                    "inverse-surface": "#2f312f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-sm": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #faf9f6;
+            color: #1a1c1a;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto bg-background/90 dark:bg-background/90 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<img alt="Moneylink Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrikaoDe8SgUtDC-PfYdjoEeH_LLMZ8uGsuZrRrU0zU6xQDkXzfDiNvgXkfV3HIx2e1eHXrkuSCdptOq25sgkkOmnSGEYA5u5CUgIwYHTN9RgMqHKgLwRdICMq3nQ_meyHbGIb--rptmuYl0lROQR4C_P2osgxPnWzZjTZhqW157XHmOFJLlQqlzIxIA2TPWvTlHuaiIeSELTLryjr3dwgyOXgz1K6zNQYGWD-Bexw-6k5NVanEmN0MQiE0SkLIseFS0tROf96gByJ"/>
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Moneylink</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Heritage</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Products</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Logistics</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Sustainability</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="text-secondary hover:text-primary transition-colors cursor-pointer font-body-sm text-body-sm">ES/JP</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-caps text-label-caps hover:opacity-80 transition-opacity active:scale-95">Contact Us</button>
+</div>
+</header>
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 transition-transform duration-[10000ms] hover:scale-100" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqA-4cctYRa9abeo7R8yvMgwNdb6mmXYRp6mD5ZQaiejbsWSmt6ftFaxgoZMZcHoBt3Aqm8I2H624AATA5GSoxZ-xeZK82x79dEI_gk9sCbN6mvDWpX1wB0AQgNS7L8KxVwJNokIYd1O_bfkQbjiSpR27_fY0oPW6DMIBz3q9Eu5wwwMBggZY6Md7JfFcYMhFYTgDB7-u1mMVdljg-HO3lEqYuqd1-EnMvXey1lXg8EDSGZD7Fke4JBbqI0Fvpo7HAKEjPejzLh1bG')"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop text-white">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-on-primary-container mb-4 block tracking-widest">ESTABLECIENDO PUENTES COMERCIALES</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">De Bolivia al Mundo: Productos Auténticos para Japón</h1>
+<p class="font-body-md text-body-md mb-10 text-surface-container-highest max-w-lg">Exportando la excelencia gourmet de Bolivia con los más altos estándares de calidad y confianza para el mercado japonés.</p>
+<div class="flex gap-4">
+<button class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded transition-all font-label-caps text-label-caps">Ver Catálogo</button>
+<button class="border border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded transition-all font-label-caps text-label-caps">Contactar</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 border border-outline-variant/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">landscape</span>
+</div>
+<h3 class="font-headline-lg text-[20px] mb-2">Origen Boliviano Auténtico</h3>
+<p class="font-body-sm text-body-sm text-secondary">Recursos puros provenientes de las regiones más ricas de Bolivia.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 border border-outline-variant/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h3 class="font-headline-lg text-[20px] mb-2">Calidad Exportable</h3>
+<p class="font-body-sm text-body-sm text-secondary">Procesos certificados bajo normativas internacionales estrictas.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 border border-outline-variant/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">handshake</span>
+</div>
+<h3 class="font-headline-lg text-[20px] mb-2">Confianza Comercial</h3>
+<p class="font-body-sm text-body-sm text-secondary">Alianzas sólidas basadas en la transparencia y cumplimiento.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 border border-outline-variant/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+</div>
+<h3 class="font-headline-lg text-[20px] mb-2">Conexión Cultural</h3>
+<p class="font-body-sm text-body-sm text-secondary">Facilitamos el diálogo entre la herencia boliviana y la precisión japonesa.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col items-center mb-20 text-center">
+<span class="font-label-caps text-label-caps text-primary mb-4 block tracking-[0.2em]">CATÁLOGO SELECTO</span>
+<h2 class="font-headline-xl text-headline-xl text-primary">Nuestros Tesoros Gourmet</h2>
+<div class="w-12 h-1 bg-primary-container mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product Card 1 -->
+<div class="bg-white border border-outline-variant/20 group hover:border-primary/30 transition-all duration-500 rounded-lg overflow-hidden">
+<div class="h-80 overflow-hidden relative">
+<img alt="Quinua Real Orgánica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA4FWVV619Vg3DK-Hqoihm242_Z6vn9f5dT4CuIxie77GD3b3ReNO1zaL7HBY2qvY_kaPMvpmszH2m1ACAVx8RVXqefDG5xirSnO2yXHH3-9uXpzNse9yqP74X_lULVWuyxuRe1Lbw62i6DUCgK3anJci0wiHlB_2-UGHWftdFnWzHZC64Mdh15-AQAEqpJOi1zCPC7LMa0aDag8p6MeyMil32SRcLRyKzbIQHHtMS2TVn_tbKgdJ1doB_USoLNbewkNZHJyQwyTo1"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 text-xs font-bold rounded">TOP EXPORT</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-lg text-2xl text-primary mb-3">Quinua Real Orgánica</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">El grano de oro de los Andes, cultivado a más de 3,600 metros de altura, certificado para el mercado global.</p>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">
+                                DETALLES TÉCNICOS <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-outline-variant/20 group hover:border-primary/30 transition-all duration-500 rounded-lg overflow-hidden">
+<div class="h-80 overflow-hidden bg-surface-container-highest flex items-center justify-center relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist high-end studio product photograph of a premium Paceña Beer bottle from Bolivia. The bottle is backlit with soft, elegant lighting, showing condensation on its glass surface. It sits on a dark, polished stone surface against a neutral, sophisticated grey background. The style is professional and corporate, emphasizing premium beverage quality for international markets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIcodzsCdNjXDswmGSinpvEbjUk_NrjzNiv3_PyrEjM9GJGTaBzZzUnrmR7c6UX0tIokW_-ffhFtIShn6lSRXltfaMTt9Zo_rHOue7fUKmQ-BYpz8OkqNFK3lCS2sbCyw9D460DqzIjSlL47A8OyZpnquDvMERzVuE6NXMSxDhjGReTLIF7pRd5Hn9F4Poe0HwdE20EzyKfF52YDof6FZrXs-BkNQFhdCvsoEls3NvyfkfjR6Alv35ccrZiyhKZlDzaWAg1hYBzFKv"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-lg text-2xl text-primary mb-3">Cerveza Paceña</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">La esencia de los Andes en cada brindis. Tradición centenaria combinada con pureza de agua de deshielo glacial.</p>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">
+                                FICHA COMERCIAL <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-outline-variant/20 group hover:border-primary/30 transition-all duration-500 rounded-lg overflow-hidden">
+<div class="h-80 overflow-hidden relative">
+<img alt="Cacao en Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzy3xbrOyCsxzFB57dXzPq4ng9u5uo7LgCFb5R68d-_vWUoJzCsg_sK0G6I4twfhPN-w6Oqb5glgs-Nuxve9D9fGBytpYoIhufQfcV88csLJPJKg0imyIKQN6xtvFQulyl6ISR3AIawApxUutGvYAehlp8S80_RLBe8xnNeOVycxku2OoTFmO85skeZxQX_YvZFF00ubVMV934oVo0gQUWUXpYIEWqQXBIm9hr_zA2UMCQ7fOu48whAToKl8O8njy6RNLT1BNil5cA"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-lg text-2xl text-primary mb-3">Cacao en Pasta</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Cacao amazónico puro de aroma intenso y calidad gourmet. Ideal para la repostería de alta gama en Japón.</p>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">
+                                ORIGEN Y TRAZA <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-32 bg-surface-container overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-24 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded overflow-hidden">
+<img alt="Container Logística" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAV_tYmM_JXB6gpv9AsOOrerWpLDh7itcZIoXuoox0P9fQTDU7v3Mh-ZnnKZVMPJ69DdYdOp8-SzZMq1vCn2CVWGz5X_CcCE41YTacnJtcJuL_GGaC6OIDx-O_vhw7-IiGgPK2QFN1mpt6cy87ycJ5hVFMd4i_7fOXNgqWW35n5gqdj7IqUW_758lIj_SP7Pti1rtFjXoEYTmzIRnnkKkamvSAyphvqKliEE6MM3hV6zfNaPrFO_mNutkd7axIt1CoeqmSKs2T5jc_"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary p-8 hidden md:block">
+<span class="text-white font-headline-xl text-5xl">25+</span>
+<p class="text-on-primary-container font-label-caps mt-4">AÑOS DE EXCELENCIA EN LOGÍSTICA INTERCONTINENTAL</p>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-label-caps text-primary tracking-widest mb-6 block">NUESTRA FILOSOFÍA</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">Conectando Culturas a través de la Excelencia</h2>
+<p class="font-body-md text-body-md text-secondary mb-8 leading-relaxed">
+                            Moneylink nació con la visión de profesionalizar la exportación boliviana. Entendemos que el mercado japonés no solo busca productos, busca historias de integridad, calidad constante y respeto por el origen.
+                        </p>
+<p class="font-body-md text-body-md text-secondary mb-10 leading-relaxed">
+                            Nuestra misión es actuar como el puente definitivo, asegurando que cada gramo de quinua o cada gota de esencia boliviana llegue a destino con la misma pureza con la que fue concebida en nuestras tierras.
+                        </p>
+<div class="grid grid-cols-2 gap-8 pt-8 border-t border-outline-variant/30">
+<div>
+<h4 class="font-bold text-primary">Misión</h4>
+<p class="text-sm text-secondary mt-2">Liderar la exportación premium garantizando sostenibilidad y comercio justo.</p>
+</div>
+<div>
+<h4 class="font-bold text-primary">Visión</h4>
+<p class="text-sm text-secondary mt-2">Ser el aliado estratégico número uno para empresas niponas en Sudamérica.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quality & Trust -->
+<section class="py-24 bg-tertiary-container text-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl shrink-0">verified_user</span>
+<div>
+<h4 class="font-headline-lg text-xl mb-3">Control de Calidad</h4>
+<p class="font-body-sm opacity-80">Inspecciones rigurosas en cada etapa del proceso, desde la cosecha hasta el embalaje final.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl shrink-0">inventory_2</span>
+<div>
+<h4 class="font-headline-lg text-xl mb-3">Trazabilidad</h4>
+<p class="font-body-sm opacity-80">Sistemas avanzados que permiten conocer el recorrido exacto de cada lote exportado.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl shrink-0">policy</span>
+<div>
+<h4 class="font-headline-lg text-xl mb-3">Estándares de Exportación</h4>
+<p class="font-body-sm opacity-80">Cumplimiento total con las regulaciones sanitarias y aduaneras de Japón y Bolivia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary p-12 md:p-20 rounded shadow-2xl flex flex-col md:flex-row gap-20">
+<div class="w-full md:w-2/5 text-white">
+<h2 class="font-headline-xl text-4xl mb-8">Hablemos de su próximo proyecto</h2>
+<p class="opacity-70 mb-12">Nuestro equipo bilingüe está preparado para asesorarlo en todas las etapas de importación y logística.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">mail</span>
+<span>contacto@moneylink.com.bo</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">call</span>
+<span>+591 2 243 0000</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim">location_on</span>
+<span data-location="La Paz, Bolivia">Edificio Corporativo, La Paz, Bolivia</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-3/5 bg-white p-10 rounded">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">NOMBRE COMPLETO</label>
+<input class="border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all p-2 text-primary" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">EMAIL CORPORATIVO</label>
+<input class="border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all p-2 text-primary" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">TIPO DE CONSULTA</label>
+<select class="border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all p-2 text-primary bg-transparent">
+<option>Interés en Productos</option>
+<option>Servicios Logísticos</option>
+<option>Alianzas Estratégicas</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">MENSAJE</label>
+<textarea class="border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all p-2 text-primary resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-4 font-label-caps tracking-widest hover:bg-primary-container transition-all">ENVIAR SOLICITUD</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-unit max-w-container-max mx-auto bg-surface-container dark:bg-surface-container">
+<div class="w-full flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+<span class="font-headline-lg text-primary">Moneylink</span>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-secondary-fixed-dim hover:text-primary font-body-sm text-body-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-secondary-fixed-dim hover:text-primary font-body-sm text-body-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-secondary-fixed-dim hover:text-primary font-body-sm text-body-sm transition-colors" href="#">Export Licenses</a>
+<a class="text-secondary-fixed-dim hover:text-primary font-body-sm text-body-sm transition-colors" href="#">Quality Standards</a>
+<a class="text-secondary-fixed-dim hover:text-primary font-body-sm text-body-sm transition-colors" href="#">Corporate Governance</a>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim text-center">© 2024 Moneylink S.A. Exporting Bolivian Excellence to Japan.</p>
+</footer>
+<script>
+        // Simple micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

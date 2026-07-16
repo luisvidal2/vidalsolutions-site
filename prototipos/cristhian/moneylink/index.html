@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <script>((d)=>{if(localStorage.getItem("moneylink-theme")==="dark"||((!localStorage.getItem("moneylink-theme"))&&matchMedia("(prefers-color-scheme:dark)").matches))d.classList.add("dark")})(document.documentElement)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moneylink — Bolivia · Japan</title>
+  <meta name="description" content="Moneylink: exportación de productos bolivianos auténticos hacia Japón. Quinua, cacao, cerveza y más. Seleccione su idioma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0D4B8C;
+      --primary-light: #1565B8;
+      --on-primary: #ffffff;
+      --background: #f8fafb;
+      --surface-container: #eceef1;
+      --outline-variant: #C4C7CF;
+      --secondary: #5A6270;
+      --tertiary: #0E8C84;
+      --tertiary-light: #18A89E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; }
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+      background: var(--primary);
+      color: var(--on-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(21, 101, 184, 0.5), transparent),
+                  radial-gradient(ellipse 60% 40% at 80% 70%, rgba(14, 140, 132, 0.3), transparent);
+      pointer-events: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    .logo-img {
+      height: 64px;
+      width: auto;
+      margin: 0 auto 1rem;
+      filter: brightness(0) invert(1);
+    }
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 3rem;
+      font-weight: 500;
+    }
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.7;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .langs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .lang-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      color: var(--on-primary);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 200ms ease;
+      backdrop-filter: blur(8px);
+    }
+    .lang-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+    .lang-card:active {
+      transform: scale(0.98);
+    }
+    .lang-card .label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .lang-card .code {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      opacity: 0.5;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .lang-card .arrow {
+      font-size: 1.25rem;
+      opacity: 0.4;
+      transition: opacity 200ms, transform 200ms;
+    }
+    .lang-card:hover .arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+    .footer-text {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      opacity: 0.35;
+      letter-spacing: 0.05em;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; }
+    }
+    :focus-visible {
+      outline: 2px solid rgba(255,255,255,0.5);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/img/logo.png" alt="Money Link SRL" class="logo-img">
+    <h1 class="logo">Money Link</h1>
+    <p class="tagline">Bolivia · Japan</p>
+    <p class="subtitle">
+      Seleccione su idioma / Choose your language / 言語を選択してください
+    </p>
+    <nav class="langs" aria-label="Language selection">
+      <a href="es/index.html" class="lang-card" hreflang="es">
+        <span class="label">
+          <span>Español</span>
+          <span class="code">ES</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="en/index.html" class="lang-card" hreflang="en">
+        <span class="label">
+          <span>English</span>
+          <span class="code">EN</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="ja/index.html" class="lang-card" hreflang="ja">
+        <span class="label">
+          <span>日本語</span>
+          <span class="code">JA</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+    <p class="footer-text">© <script>document.write(new Date().getFullYear())</script> Money Link S.R.L.</p>
+  </div>
+</body>
+</html>

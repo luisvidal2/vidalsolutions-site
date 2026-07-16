@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cerveza Paceña | Moneylink Gourmet Exports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Hanken+Grotesk:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-on-surface": "#f2f1ec",
+                "surface-container": "#f0eee9",
+                "on-surface": "#1b1c19",
+                "on-secondary-fixed-variant": "#61401b",
+                "on-error-container": "#93000a",
+                "primary-container": "#2d2926",
+                "secondary-fixed-dim": "#eebd8e",
+                "tertiary-fixed": "#ffdbcf",
+                "surface-container-high": "#eae8e3",
+                "tertiary-container": "#4b1b08",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#6f3722",
+                "inverse-primary": "#cdc5c0",
+                "secondary-container": "#fdcb9b",
+                "surface": "#fbf9f4",
+                "surface-dim": "#dbdad5",
+                "surface-container-highest": "#e4e2dd",
+                "on-secondary-container": "#79542d",
+                "on-tertiary-container": "#c77f65",
+                "primary": "#181512",
+                "secondary-fixed": "#ffdcbd",
+                "tertiary": "#2e0900",
+                "on-primary-container": "#96908b",
+                "surface-variant": "#e4e2dd",
+                "on-secondary-fixed": "#2c1600",
+                "surface-container-low": "#f5f3ee",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#1e1b18",
+                "on-primary-fixed-variant": "#4b4642",
+                "on-surface-variant": "#4d4540",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#fbf9f4",
+                "on-tertiary-fixed": "#380d00",
+                "inverse-surface": "#30312e",
+                "primary-fixed": "#e9e1dc",
+                "surface-tint": "#635d5a",
+                "tertiary-fixed-dim": "#ffb59b",
+                "background": "#fbf9f4",
+                "on-background": "#1b1c19",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "outline-variant": "#cfc4bd",
+                "secondary": "#7c5730",
+                "primary-fixed-dim": "#cdc5c0",
+                "outline": "#7e756f"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "unit": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "label-caps": ["Hanken Grotesk"],
+                "headline-sm": ["Playfair Display"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-md": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"],
+                "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-elegant {
+            text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .foil-shimmer {
+            background: linear-gradient(135deg, #A67C52 0%, #D98E73 50%, #A67C52 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky z-50 border-b border-outline-variant/30 transition-all">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary">Moneylink</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Chocolate</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Quinua</a>
+<a class="text-primary border-b-2 border-secondary pb-1 text-label-caps font-label-caps" href="#">Cerveza</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-caps font-label-caps" href="#">Process</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 text-label-caps font-label-caps hover:scale-105 transition-transform">
+                Export Inquiry
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full flex items-center justify-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic, high-end studio photograph of a single bottle of Cerveza Paceña beer. The bottle is chilled, covered in delicate frost and realistic water droplets. It is dramatically lit from the side with warm amber and gold light, set against a deep charcoal-black background. Soft golden reflections catch the glass and the metallic gold label, creating a sense of luxury and cold refreshment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmG0fqpc_ZpqrwK9Ug3UNUlnsdRHDZSVGdYFdXFUQeZGjBgI2ybQiLNYMs-Dxx44285lkb89FJtc-6hzyqIes7sLiHypGL0KdflJo8uP0umzPtAfMFSmjVGzWX5qRoESIMg2az3H_KBZAJa1hJztCQ8uTpbb0bvNv6pek9XqQ2XCsn8Dl7RVtuR9diqv5kHtn7J049Spp3lyxqMSy_VUDatlAj4XU_-eyH5U3plej00QMfITfqsECoKAId6tS6LCj2Fk8zM-VH7wQ"/>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<p class="text-label-caps font-label-caps text-secondary-fixed mb-4 tracking-[0.2em]">SINCE 1886</p>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-primary mb-6">Paceña: The Peak of Brewing</h1>
+<p class="text-body-lg font-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">
+                    High-altitude pilsener crafted with Andean glacial water. A Bolivian icon, refined for the discerning global market.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-secondary px-10 py-4 text-label-caps font-label-caps hover:bg-secondary-container transition-colors">EXPLORE HERITAGE</button>
+<button class="border border-outline-variant text-on-primary px-10 py-4 text-label-caps font-label-caps hover:bg-white/10 transition-colors">TECHNICAL DATA</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-on-primary">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Historia (Heritage) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<img class="w-full aspect-[4/5] object-cover border border-outline-variant p-4 bg-white" data-alt="A vintage, sepia-toned archival photograph of a historic Bolivian brewery from the late 19th century. The image shows industrial brick architecture, large copper kettles, and workers in period-appropriate attire. The photograph is framed with a thin gold border, evoking a sense of heritage, longevity, and traditional craftsmanship within a minimalist museum-style layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuYBOLj_5U91EkgF_tfNSC22_wWojnr6Ky6y7cbs09NLlsuPyHwi5EMoZ9i2f1ioCZDl1MNgkIxJK5kIpWm4MfY65-yowMIEmKBDl7MGBXzqc1nDPOLWkl1FqP57BCO-hbmm5fCuoR6-kqy30mhYziahQQ0z2sNtMbi-c7kz2CmwbQt7Zu6RcPnWCX4QSbcpAm9-8b2qZxb1bEz3R2NOOIg-6UQ-FJhp4q97AQaLVezi3AJGHbReCRDw5EoI75dCf8ffnIPUK5QSM"/>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<span class="text-label-caps font-label-caps text-secondary">OUR LEGACY</span>
+<h2 class="text-headline-md font-headline-md text-primary leading-tight">The Heritage of the Altiplano</h2>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                        Born in the heart of La Paz over 130 years ago, Paceña is more than a beer; it is the liquid soul of Bolivia. In the high-altitude air of the Andes, where water is purer and oxygen is thinner, we perfected a pilsener that defied standard brewing physics.
+                    </p>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                        Moneylink proudly brings this heritage export to the international stage, maintaining the strict standards set by the founding masters of the Cervecería Boliviana Nacional.
+                    </p>
+<div class="pt-4 flex gap-8">
+<div class="text-center">
+<p class="text-headline-sm font-headline-sm text-primary">138</p>
+<p class="text-label-caps font-label-caps text-on-surface-variant">YEARS</p>
+</div>
+<div class="text-center">
+<p class="text-headline-sm font-headline-sm text-primary">3600m</p>
+<p class="text-label-caps font-label-caps text-on-surface-variant">ALTITUDE</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- El Símbolo (Emblem Breakdown) -->
+<section class="bg-surface-container py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+<h2 class="text-headline-md font-headline-md text-primary mb-4">El Símbolo</h2>
+<p class="text-label-caps font-label-caps text-secondary">THE ANATOMY OF AN ICON</p>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 0;">verified</span>
+<h3 class="text-headline-sm font-headline-sm mb-4">The Crown</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Symbolizing our leadership in the Bolivian market and the unwavering quality of our ingredients.</p>
+</div>
+<div class="bg-surface p-8 border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 1;">landscape</span>
+<h3 class="text-headline-sm font-headline-sm mb-4">The Illimani</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">The guardian mountain of La Paz, representing the high-altitude water source and our origin.</p>
+</div>
+<div class="bg-surface p-8 border border-outline-variant flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 0;">history_edu</span>
+<h3 class="text-headline-sm font-headline-sm mb-4">The Script</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Our signature calligraphy remains unchanged since 1886, a testament to timeless authenticity.</p>
+</div>
+</div>
+</section>
+<!-- Origen (Map Section) -->
+<section class="py-24 relative bg-primary text-on-primary overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<div class="w-full h-full grayscale contrast-125" data-location="La Paz, Bolivia" style=""></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-label-caps font-label-caps text-secondary-fixed mb-4 block">SOURCE OF LIFE</span>
+<h2 class="text-headline-md font-headline-md mb-8">Purity from the Peaks</h2>
+<p class="text-body-lg font-body-lg text-primary-fixed-dim leading-relaxed mb-8">
+                        Our brewing facility is located in the clouds. At 3,600 meters above sea level, we utilize pure glacial meltwater from the Royal Cordillera. 
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">water_drop</span>
+<span class="text-body-md font-body-md">Naturally filtered through mineral-rich Andean granite.</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">ac_unit</span>
+<span class="text-body-md font-body-md">Cold-fermentation optimized for mountain pressure.</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container/10 border border-outline-variant/30 backdrop-blur-sm p-12 flex flex-col justify-center">
+<div class="border-l-2 border-secondary-fixed pl-6 py-4">
+<p class="text-label-caps font-label-caps text-secondary-fixed mb-2">LOCATION</p>
+<p class="text-headline-sm font-headline-sm">La Paz, Bolivia</p>
+<p class="text-body-md font-body-md text-on-primary-container">-16.5000° S, -68.1500° W</p>
+</div>
+<div class="border-l-2 border-secondary-fixed pl-6 py-4 mt-8">
+<p class="text-label-caps font-label-caps text-secondary-fixed mb-2">ELEVATION</p>
+<p class="text-headline-sm font-headline-sm">3,600 Meters</p>
+<p class="text-body-md font-body-md text-on-primary-container">World's Highest Large-Scale Brewery</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Proceso (Bento Grid) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-headline-md font-headline-md text-primary">The Art of the Brew</h2>
+<p class="text-label-caps font-label-caps text-secondary mt-2">CRAFTED FOR EXCELLENCE</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, artistic shot of high-quality golden barley grains being poured through a master brewer's hands. The lighting is warm and golden, highlighting the texture of the malt. The scene is shot in a high-end, editorial style with a shallow depth of field, emphasizing the raw natural ingredients of the beer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTwL8weYLoy3qGezrhi4JXxkkxyGl7TQyq8xYH2aGxip-hWstWeuFnh0VP6ibA6qki-mWrhRIcc8TIMaVfdvBZdNgsAIx_NdXqqTfsuz1Ym_8LrClHJCV92rFzs4I2N8xW-bDzTWbHLssfsYn2Hr-lUrOhSTJVnGJM6xD9NsK-nxSkqjvzKwZGKCtZZ1MtrZA-_iWrdFcxlloRzYhuh1fRzXwtr9TS417NJL6lf_dJrbrRVwHNZtYS019VoolGdCGimLx4WOTAKVE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<p class="text-label-caps font-label-caps text-secondary-fixed">STAGE 01</p>
+<h4 class="text-headline-sm font-headline-sm text-white">Selection of Noble Grains</h4>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Inside a modern yet traditional brewery, large polished copper kettles gleam under industrial warm lighting. Steam rises softly in the background, creating an atmosphere of intense production and artisanal care. The image is sophisticated and clean, focusing on the heritage of the brewing process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl8bWLD6tTz8ntfC3EZxY6Ek17Y6jDgFPXftYkXf5qg09L5vMyUWmlI4iOGFZHMN9t4BSNObJ_yMbA9NylphKz5c9KdbH0Gt3jW7EsQCJ5iHRxG82g7cXrzuCOr6hUiOua1bwdtWrr0yfRV6VAY4vRzNSFo9A3AMtPkvAbW7Y9mm6X2mY5fD3qxOsMXFjBVZjVDpl6D4Fk94Rsh8yI2THJ8vNacG2V4IwMPSGxsr7t9WwzeAgPsDC7nqGLlcb04iW9ViWu1Nk89YM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<p class="text-label-caps font-label-caps text-secondary-fixed">STAGE 02</p>
+<h4 class="text-headline-sm font-headline-sm text-white">Masterful Boiling</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A macro photograph of golden beer being poured into a crystal glass. Millions of tiny, rising bubbles and a thick, creamy white head of foam are visible. The lighting is bright and crisp, showcasing the clarity and perfect carbonation of the pilsener against a neutral ivory background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHvzt5D34Ok0RY0EHI506WstYQxJvh-6Go2lM2WgzIqQzm8WKZCAt70-uq7HZdGbblWZmE5K7Xb5wi-qblkQe6GH4qclyD9HdicHDVUR_0axjncMtAsRQdrysxhJ5-H2R6EYQvK0lW2q2GX-dQkRADnXd8IynnIa_bqcIPyWciYtedb72q8fFUierbuiU4VmMNjIVgbdqVBAVqy3NG6MH4l3lrXpJXjWmmwhVBaeNyFflYNXsxKbMTkSJ7sBZ0YdheOSrIfRhZ_SY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<p class="text-label-caps font-label-caps text-secondary-fixed">STAGE 03</p>
+<h4 class="text-headline-sm font-headline-sm text-white text-base">Pure Filtration</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A row of cold Paceña beer bottles on a conveyor belt, moving through a high-precision bottling line. The bottles are dark green and amber, glistening with condensation. The environment is impeccably clean and technologically advanced, representing the scale and quality of Moneylink exports." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz0IqMXJbVlcDSTfZJ6lvVigGRVOxrMKMGgeaZHXe--iH39LiBGhmWMauGqRiNKdEscATVFbAMjyIicio3uOujx5Kq1jjq0VvqGdlXJfhc3dwBqiJXO0NEE4ive7CUQg3NoTTAKbDCYrWTBPdsYjX7s0NzJXD7nK_5yFq0glorbvwi5uHpw2zrYan5f5c8I_l_zXUnFxSQG5f5QNtmhvoFB03Obkr358XkoJQ90j_an2k4BqEM3Ruf32Xp4Q_WOdLvTnlrpIyEDzw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<p class="text-label-caps font-label-caps text-secondary-fixed">STAGE 04</p>
+<h4 class="text-headline-sm font-headline-sm text-white text-base">Sealed Freshness</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Presentaciones (Product Grid) -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary">The Portfolio</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Available for worldwide export and wholesale.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Format 1 -->
+<div class="bg-surface p-8 border border-outline-variant group hover:shadow-xl transition-all duration-500">
+<div class="h-80 mb-8 overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500" data-alt="A premium 620ml dark brown glass bottle of Cerveza Paceña, isolated against a soft stone-colored background. The label is a rich gold and red, reflecting light elegantly. The bottle looks chilled and inviting, representing the flagship format for shared experiences." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHURh4M3A4nvKnMnQFEUX7hf8CsmJKumdHAO6MUBBHB0bG5U7y4XiUUKbDr90mCeO5oE5WLoInSpB6SoaW0tila6BunEQFLjhXx-jXpiDcfYCvYgYUtwtZ4I9WBke-pt5tDwuBK4dOMlONdXLB4KsvxAyeTf9j4NIZyrmTKnMFwQJRk4_Z7PNCx4nvw5Xf-NyPf40ZE4fEbwi7giuc06XFu08mp-GyrrG4OKeDPB_PQkFUsAcogTuhe8RG1xl5Ssg1hv2OBDMhk_s"/>
+</div>
+<h3 class="text-headline-sm font-headline-sm mb-2">The Heritage Bottle</h3>
+<p class="text-label-caps font-label-caps text-secondary mb-4">620ML | CLASSIC LAGER</p>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">The iconic presentation, perfect for ceremonial pouring and traditional gatherings.</p>
+<a class="inline-flex items-center text-label-caps font-label-caps text-primary hover:text-secondary transition-colors" href="#">
+                            VIEW LOGISTICS <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Format 2 -->
+<div class="bg-surface p-8 border border-outline-variant group hover:shadow-xl transition-all duration-500">
+<div class="h-80 mb-8 overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500" data-alt="A sleek, modern 350ml gold and blue aluminum can of Cerveza Paceña. The can is covered in fine condensation droplets and positioned dynamically. The metallic finish of the can catches the light, emphasizing its premium pilsener quality and convenient format for international distribution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzU6BEWyuCbo3sLXw3Nok5sVbS-Me0EqWvhz14yNtjIbOqU0x2pHQdh_65Ck4gWCjG3k7bqr-1AbzJTMblsOaDhPshZ58un6b1chTD7az0vGZNib6u-dXXLwcCQfEChKzfyspC-Md77h3gKWI0TKSN-wKp7Kz5fuJY0n2iPo4iF29tXksx6d91NZW2LHeNIjRMohB1EPHUch6ucXpGlWJnywtUojOks2SDMB5ouqgkz9ep7uMUBh2BLMePx6gGWevjzUBg0f3bnYQ"/>
+</div>
+<h3 class="text-headline-sm font-headline-sm mb-2">The Export Can</h3>
+<p class="text-label-caps font-label-caps text-secondary mb-4">350ML | PILSENER</p>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Lightweight, sustainable, and designed for maximum freshness during global transit.</p>
+<a class="inline-flex items-center text-label-caps font-label-caps text-primary hover:text-secondary transition-colors" href="#">
+                            VIEW LOGISTICS <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Format 3 -->
+<div class="bg-surface p-8 border border-outline-variant group hover:shadow-xl transition-all duration-500">
+<div class="h-80 mb-8 overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500" data-alt="A 330ml 'Paceñita' small bottle of Cerveza Paceña, featuring its unique rounded shape and metallic gold cap. The setting is a luxury bar environment with soft bokeh lights in the background, suggesting high-end consumption and individual elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiK9s4o4oQV2Dte5TM4STw4iNd8AnzPZN5xpams7ZGlAoedO3WzhexRFsnPwDAptwtDG_ufavD8J4qfy_GVI2VcUekb0NNwZllk-aVf47u8bF0Cooz8yft73s4t0YzewHiDpTKtU9n6kcqGwxfbGnEGd6EOYuMQv-vgsEEk05Tz-vLVmCBB0Jvi2bFoiQAeYnuPaM3ZKc-4B5MXtuZlHABHrr6fCdVLhMcpjcbtRhq2XNJ-tjmoyNmIN9aP2-Pj7S1DKY9k1lt5TA"/>
+</div>
+<h3 class="text-headline-sm font-headline-sm mb-2">The Paceñita</h3>
+<p class="text-label-caps font-label-caps text-secondary mb-4">330ML | INDIVIDUAL</p>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">The compact classic, ideal for hospitality venues and personal premium moments.</p>
+<a class="inline-flex items-center text-label-caps font-label-caps text-primary hover:text-secondary transition-colors" href="#">
+                            VIEW LOGISTICS <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Ficha Técnica (Technical Specs) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="border border-outline-variant p-12 bg-white">
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-8">Ficha Técnica</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-10">
+                            Our technical profile reflects our commitment to consistency and quality. Each batch is tested against the "Purity of the Heights" standard.
+                        </p>
+<div class="space-y-6">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">STYLE</span>
+<span class="text-body-md font-body-md font-bold">American Adjunct Lager / Pilsener</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">ABV</span>
+<span class="text-body-md font-body-md font-bold">4.8% Vol.</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">CORE INGREDIENTS</span>
+<span class="text-body-md font-body-md font-bold">Glacial Water, Noble Hops, 2-Row Malt</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-label-caps font-label-caps text-on-surface-variant">SERVING TEMP</span>
+<span class="text-body-md font-body-md font-bold">2°C - 4°C</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-10 flex flex-col justify-center border border-outline-variant">
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl text-secondary mb-4">award_star</span>
+<h4 class="text-headline-sm font-headline-sm mb-4">Monde Selection Gold</h4>
+<p class="text-body-md font-body-md text-on-surface-variant italic mb-8">"Consistently recognized globally for purity and balance."</p>
+<button class="w-full bg-primary text-on-primary py-4 text-label-caps font-label-caps tracking-widest hover:bg-on-surface-variant transition-colors">REQUEST EXPORT SPECS</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-primary text-center">
+<div class="px-margin-desktop max-w-2xl mx-auto">
+<h2 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-primary mb-8">Bring the Spirit of the Andes to Your Market.</h2>
+<p class="text-body-lg font-body-lg text-on-primary-container mb-12">Join our network of premium global distributors and experience the excellence of Moneylink curation.</p>
+<button class="bg-secondary text-on-secondary px-16 py-6 text-label-caps font-label-caps hover:scale-105 transition-transform duration-300">
+                    START EXPORT INQUIRY
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high py-16 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="text-headline-sm font-headline-sm text-primary mb-6">Moneylink</div>
+<p class="text-body-md font-body-md text-on-surface-variant pr-8">
+                    Curating the finest Bolivian gourmet exports for the global luxury market. Authenticity, heritage, and uncompromising quality in every shipment.
+                </p>
+</div>
+<div class="md:col-span-2">
+<h5 class="text-label-caps font-label-caps text-primary mb-6">PORTFOLIO</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Chocolate</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Quinua</a></li>
+<li><a class="text-secondary font-bold text-body-md" href="#">Cerveza</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Specialty Grain</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="text-label-caps font-label-caps text-primary mb-6">COMPANY</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Origin Stories</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Sustainability</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Export Terms</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col justify-between">
+<div>
+<h5 class="text-label-caps font-label-caps text-primary mb-6">STAY INFORMED</h5>
+<div class="flex gap-2">
+<input class="bg-surface border-outline-variant text-body-md w-full focus:ring-0 focus:border-secondary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary p-3">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<div class="mt-8 flex gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">hub</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">verified_user</span>
+</div>
+</div>
+</div>
+<div class="mt-16 px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-caps font-label-caps text-on-surface-variant opacity-60">© 2024 Moneylink Gourmet Exports. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary" href="#">PRIVACY</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary" href="#">TERMS</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
